@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novedades — Instituto América Córdoba</title>
+<meta name="description" content="Últimas noticias y novedades del Instituto América. Mantenete informado sobre todo lo que pasa en nuestra comunidad educativa cristiana en Córdoba.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.novedades-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.novedad-full { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 12px rgba(107,18,32,.07); }
+.novedad-full-img { aspect-ratio: 16/9; overflow: hidden; position: relative; }
+.novedad-full-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .4s; }
+.novedad-full:hover .novedad-full-img img { transform: scale(1.04); }
+.novedad-full-body { padding: 1.8rem; }
+.novedad-full-body .fecha { font-size: 11px; font-weight: 600; color: var(--naranja); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .5rem; }
+.novedad-full-body h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--bordo); line-height: 1.3; margin-bottom: 1rem; }
+.novedad-full-body p { font-size: 13.5px; color: var(--gris); line-height: 1.8; font-weight: 300; margin-bottom: .9rem; }
+.novedad-full-body p:last-of-type { margin-bottom: 0; }
+.novedad-col-main { grid-column: span 2; }
+@media(max-width:1024px){ .novedades-grid { grid-template-columns: 1fr 1fr; } .novedad-col-main { grid-column: span 2; } }
+@media(max-width:768px){ .novedades-grid { grid-template-columns: 1fr; } .novedad-col-main { grid-column: span 1; } }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo"><div class="nav-logo-mark">IA</div><div class="nav-logo-text">Instituto<br>América</div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="vida-academica.html">Vida Académica</a></li>
+    <li><a href="docentes.html">Docentes</a></li>
+    <li><a href="novedades.html" class="active">Novedades</a></li>
+    <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+    <li><a href="https://deioweb.com.ar/SAG/" target="_blank" class="nav-autogestion">Autogestión ↗</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="vida-academica.html">Vida Académica</a><a href="docentes.html">Docentes</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a><a href="https://deioweb.com.ar/SAG/" target="_blank">Autogestión ↗</a>
+</div>
+
+<header class="page-header">
+  <div class="page-header-tag">Comunidad</div>
+  <h1>Novedades del Instituto</h1>
+  <p>Mantenete informado sobre todo lo que pasa en nuestra comunidad educativa: actos, proyectos, presentaciones y más.</p>
+</header>
+
+<section class="section">
+  <div class="novedades-grid">
+
+    <!-- NOTA PRINCIPAL -->
+    <div class="novedad-full novedad-col-main reveal">
+      <div class="novedad-full-img" style="background:linear-gradient(135deg,var(--bordo),var(--bordo2));display:flex;align-items:center;justify-content:center;position:relative">
+        <div style="font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:700;color:#fff;opacity:.9">DZ</div>
+        <span class="novedad-tag">Institución</span>
+      </div>
+      <div class="novedad-full-body">
+        <div class="fecha">26 mayo, 2025</div>
+        <h2>Presentación de la Directora del Nivel Inicial y Primario</h2>
+        <p>La profesora Débora Zapata es una docente por vocación, graduada en el año 1993. Se incorporó a nuestra institución en el año 2006, proveniente de una escuela hermanada por la misma fe cristiana que nos une.</p>
+        <p>Su trayectoria de más de 30 años en educación, combinada con su profundo compromiso con los valores que guían al Instituto América, la convierten en un referente indiscutible de nuestra comunidad educativa. Su liderazgo se caracteriza por la calidez humana, el rigor pedagógico y una fe vivida que impregna cada aspecto de su gestión.</p>
+        <p>La profesora Zapata asumió la conducción del Nivel Inicial y Primario con el firme propósito de seguir fortaleciendo la propuesta educativa del Instituto y consolidar los lazos entre las familias, los docentes y los alumnos.</p>
+      </div>
+    </div>
+
+    <!-- NOTA SECUNDARIA -->
+    <div class="novedad-full reveal d1">
+      <div class="novedad-full-img" style="background:linear-gradient(135deg,var(--bordo2),#8B1A2E);display:flex;align-items:center;justify-content:center;position:relative">
+        <div style="font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:700;color:#fff;opacity:.9">SR</div>
+        <span class="novedad-tag">Institución</span>
+      </div>
+      <div class="novedad-full-body">
+        <div class="fecha">22 octubre, 2024</div>
+        <h2>Presentación de la Vicedirectora del Nivel Inicial y Primario</h2>
+        <p>La profesora Silvia Débora Rico, una educadora con una sólida trayectoria académica y profesional, se ha destacado por su dedicación y compromiso en el ámbito educativo y social.</p>
+        <p>Su incorporación a la conducción del Nivel Inicial y Primario reafirma el compromiso del Instituto América con la calidad educativa y la formación en valores.</p>
+      </div>
+    </div>
+
+    <!-- CARD INSCRIPCIONES -->
+    <div class="novedad-full reveal">
+      <div class="novedad-full-img" style="background:linear-gradient(135deg,var(--bordo),var(--bordo2));display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;color:rgba(255,255,255,.75)">
+          <div style="font-size:3rem;margin-bottom:.8rem">📅</div>
+          <div style="font-size:15px;font-weight:600;color:#fff">Inscripciones 2026</div>
+        </div>
+        <span class="novedad-tag naranja">Admisiones</span>
+      </div>
+      <div class="novedad-full-body">
+        <div class="fecha">Ciclo lectivo 2026</div>
+        <h2>Inscripciones 2026 abiertas — ¡Asegurá el lugar!</h2>
+        <p>Los cupos son limitados en todos los niveles. Te recomendamos iniciar el proceso de inscripción con anticipación para asegurar el lugar de tu hijo/a.</p>
+        <p>Completá el formulario de contacto y nos comunicamos a la brevedad para orientarte en el proceso.</p>
+        <div style="margin-top:1.2rem"><a href="contacto.html" class="btn-primary btn-bordo" style="font-size:12px;padding:10px 20px">Consultar ahora →</a></div>
+      </div>
+    </div>
+
+    <!-- CARD REFLEXION -->
+    <div class="novedad-full reveal d1">
+      <div class="novedad-full-img" style="background:linear-gradient(135deg,var(--bordo2),#8B1A2E);display:flex;align-items:center;justify-content:center;padding:2rem">
+        <blockquote style="font-family:'Playfair Display',serif;font-style:italic;color:rgba(255,255,255,.85);font-size:1rem;text-align:center;line-height:1.6">«El principio de la sabiduría es el temor de Jehová»</blockquote>
+        <span class="novedad-tag">Fe</span>
+      </div>
+      <div class="novedad-full-body">
+        <div class="fecha">Reflexión del mes</div>
+        <h2>Sabiduría para Estudiantes</h2>
+        <p>Como estudiantes, a menudo buscamos conocimiento en libros y maestros, pero la verdadera sabiduría comienza al reconocer a Dios como fuente de todo entendimiento.</p>
+        <p>No se trata solo de acumular información, sino de aplicar Su verdad con humildad y discernimiento en cada aspecto de la vida.</p>
+      </div>
+    </div>
+
+    <!-- PRÓXIMAS NOVEDADES PLACEHOLDER -->
+    <div class="novedad-full reveal">
+      <div class="novedad-full-img" style="background:var(--gris-l);display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;color:rgba(74,12,23,.25)">
+          <div style="font-size:2.5rem;margin-bottom:.5rem">📰</div>
+          <div style="font-size:12px;font-style:italic">Próximas novedades</div>
+        </div>
+      </div>
+      <div class="novedad-full-body">
+        <div class="fecha">Próximamente</div>
+        <h2>Más novedades en camino</h2>
+        <p>Esta sección se actualiza periódicamente con noticias, actos, proyectos académicos y actividades de la comunidad del Instituto América.</p>
+        <p>Seguinos en nuestras redes sociales para estar al tanto de todas las novedades en tiempo real.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="versiculo">
+  <blockquote>«Instruye al niño en su camino, y aun cuando fuere viejo no se apartará de él.» <cite>Proverbios 22:6</cite></blockquote>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="logo-row"><div class="logo-mark">IA</div><span class="logo-name">Instituto América</span></div><p>Colegio cristiano evangélico en Córdoba con más de 50 años formando estudiantes en valores, fe y excelencia académica.</p></div>
+    <div class="footer-col"><h4>Institución</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></div>
+    <div class="footer-col"><h4>Niveles</h4><a href="vida-academica.html#inicial">Nivel Inicial</a><a href="vida-academica.html#primario">Nivel Primario</a><a href="vida-academica.html#secundario">Nivel Secundario</a><a href="docentes.html">Docentes</a></div>
+    <div class="footer-col"><h4>Contacto</h4><span>Francisco del Prado 2662</span><span>Córdoba, Argentina</span><span>+54 9 351 123-4567</span><span>info@institutoamerica.com.ar</span></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Instituto América. Todos los derechos reservados.</p>
+    <div class="footer-right"><a href="https://deioweb.com.ar/SAG/" target="_blank">Autogestión</a><a href="contacto.html">Inscripciones</a><span class="footer-credit">Diseño: Kikar Agencia Digital</span></div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>50));
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros — Instituto América Córdoba</title>
+<meta name="description" content="Conocé la historia, misión y valores del Instituto América, colegio cristiano evangélico en Córdoba con más de 50 años formando estudiantes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.nosotros-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.nosotros-intro img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 4px; }
+.nosotros-text p { font-size: 14px; line-height: 1.85; color: var(--gris); margin-bottom: 1rem; font-weight: 300; }
+.mision-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2rem; }
+.historia-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+.historia-text p { font-size: 14px; line-height: 1.85; color: var(--gris); margin-bottom: 1rem; font-weight: 300; }
+.pilares-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin-top: 1.5rem; }
+@media (max-width: 1024px) {
+  .nosotros-intro, .historia-grid { grid-template-columns: 1fr; }
+  .mision-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) { .mision-grid { grid-template-columns: 1fr; } .pilares-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">IA</div>
+    <div class="nav-logo-text">Instituto<br>América</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="nosotros.html" class="active">Nosotros</a></li>
+    <li><a href="vida-academica.html">Vida Académica</a></li>
+    <li><a href="docentes.html">Docentes</a></li>
+    <li><a href="novedades.html">Novedades</a></li>
+    <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+    <li><a href="https://deioweb.com.ar/SAG/" target="_blank" class="nav-autogestion">Autogestión ↗</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Inicio</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="vida-academica.html">Vida Académica</a>
+  <a href="docentes.html">Docentes</a>
+  <a href="novedades.html">Novedades</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://deioweb.com.ar/SAG/" target="_blank">Autogestión ↗</a>
+</div>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="page-header-tag">Nuestra institución</div>
+  <h1>¿Quiénes somos?</h1>
+  <p>Conocé los valores, la historia y la comunidad que construimos juntos desde 1974.</p>
+</header>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="nosotros-intro">
+    <div class="nosotros-text reveal">
+      <div class="section-tag">Quiénes somos</div>
+      <h2 class="section-title" style="margin-bottom:1.2rem">Una comunidad educativa con identidad y propósito</h2>
+      <p>Somos un colegio cristiano evangélico dedicado a la formación integral de nuestros estudiantes, combinando excelencia académica con principios y valores basados en la fe cristiana.</p>
+      <p>Nuestro objetivo es educar para la vida, desarrollando el potencial de cada alumno en un ambiente de amor, respeto y compromiso con Dios. Creemos que cada niño y joven es un ser único, con dones y talentos que merecen ser cultivados.</p>
+      <div class="pilares-grid">
+        <div class="pilar"><div class="pilar-t">Fe cristiana</div><div class="pilar-d">Formación humana integral desde los valores bíblicos</div></div>
+        <div class="pilar"><div class="pilar-t">Excelencia</div><div class="pilar-d">Estándares académicos de calidad en todos los niveles</div></div>
+        <div class="pilar"><div class="pilar-t">Comunidad</div><div class="pilar-d">Vínculo profundo entre familias, docentes y alumnos</div></div>
+        <div class="pilar"><div class="pilar-t">Integralidad</div><div class="pilar-d">Desarrollo de la persona en todas sus dimensiones</div></div>
+      </div>
+    </div>
+    <img src="img/patio.jpg" alt="Comunidad Instituto América" class="reveal d1">
+  </div>
+</section>
+
+<!-- VERSÍCULO -->
+<div class="versiculo">
+  <blockquote>
+    «Instruye al niño en su camino, y aun cuando fuere viejo no se apartará de él.»
+    <cite>Proverbios 22:6</cite>
+  </blockquote>
+</div>
+
+<!-- MISIÓN VISIÓN VALORES -->
+<section class="section" style="background:#fff">
+  <div class="section-tag">Nuestra identidad</div>
+  <h2 class="section-title" style="margin-bottom:.3rem">Misión, Visión y Valores</h2>
+  <div class="mision-grid" style="margin-top:2rem">
+    <div class="mision-card reveal">
+      <h3>Misión</h3>
+      <p>Somos un colegio cristiano evangélico dedicado a la formación integral de nuestros estudiantes, combinando excelencia académica con principios y valores basados en la fe cristiana. Nuestro objetivo es educar para la vida, desarrollando el potencial de cada alumno en un ambiente de amor, respeto y compromiso con Dios.</p>
+    </div>
+    <div class="mision-card reveal d1">
+      <h3>Visión</h3>
+      <p>Ser una institución educativa de referencia en Córdoba, reconocida por su compromiso con la formación integral del ser humano, la excelencia académica y la vivencia de valores cristianos que transformen positivamente a cada alumno, cada familia y la sociedad en su conjunto.</p>
+    </div>
+    <div class="mision-card reveal d2">
+      <h3>Valores</h3>
+      <p>Fe en Dios, amor al prójimo, honestidad, responsabilidad, respeto mutuo y excelencia en todo lo que emprendemos. Estos valores no son solo palabras: son el fundamento que guía cada decisión, cada clase y cada vínculo dentro de nuestra comunidad educativa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section class="section">
+  <div class="historia-grid">
+    <div class="reveal">
+      <div class="section-tag">Nuestra historia</div>
+      <h2 class="section-title" style="margin-bottom:1.5rem">Más de 50 años<br>formando generaciones</h2>
+      <div class="historia-text">
+        <div class="historia-item">
+          <div class="historia-year">1974</div>
+          <div>
+            <h4>Fundación</h4>
+            <p>Instituto América nació por iniciativa de un grupo de personas de la comunidad cristiana evangélica de Córdoba, con la convicción de que la educación basada en valores bíblicos transforma vidas y comunidades.</p>
+          </div>
+        </div>
+        <div class="historia-item">
+          <div class="historia-year">1996</div>
+          <div>
+            <h4>Nivel Secundario</h4>
+            <p>La institución incorporó el Nivel Secundario por iniciativa de la comunidad cristiana evangélica, ampliando la propuesta educativa y permitiendo que los alumnos completaran su trayecto escolar completo.</p>
+          </div>
+        </div>
+        <div class="historia-item">
+          <div class="historia-year">Hoy</div>
+          <div>
+            <h4>Una comunidad consolidada</h4>
+            <p>Con más de 1.200 alumnos en tres niveles, el Instituto América sigue fiel a su misión fundacional: educar para la vida desde la fe cristiana, formando personas íntegras comprometidas con Dios y con la sociedad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal d1" style="display:flex;flex-direction:column;gap:1rem">
+      <img src="img/inicial.jpg" alt="Instituto América" style="border-radius:4px;width:100%;object-fit:cover;aspect-ratio:4/3">
+      <img src="img/secundario.jpg" alt="Instituto América" style="border-radius:4px;width:100%;object-fit:cover;aspect-ratio:4/3">
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="section" style="padding-top:0">
+  <div class="section-tag">Galería</div>
+  <h2 class="section-title" style="margin-bottom:1.5rem">Nuestra comunidad en imágenes</h2>
+  <div class="galeria-grid">
+    <div class="galeria-item"><img src="img/hero.jpg" alt="Instituto América"></div>
+    <div class="galeria-item"><img src="img/patio.jpg" alt="Instituto América"></div>
+    <div class="galeria-item"><img src="img/inicial.jpg" alt="Instituto América"></div>
+    <div class="galeria-item"><img src="img/primario.jpg" alt="Instituto América"></div>
+    <div class="galeria-item"><img src="img/secundario.jpg" alt="Instituto América"></div>
+    <div class="galeria-item"><img src="img/proyectos1.jpg" alt="Instituto América"></div>
+    <div class="galeria-item"><img src="img/proyectos2.jpg" alt="Instituto América"></div>
+    <div class="galeria-item"><img src="img/proyectos3.jpg" alt="Instituto América"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" style="text-align:center">
+  <h2 class="section-title light" style="margin-bottom:1rem">¿Querés ser parte de<br>nuestra comunidad?</h2>
+  <p style="color:rgba(255,255,255,.6);max-width:480px;margin:0 auto 2rem;font-size:14px;line-height:1.7;font-weight:300">Inscripciones 2026 abiertas para todos los niveles. Los cupos son limitados.</p>
+  <a href="contacto.html" class="btn-primary">Consultá por inscripciones →</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-row"><div class="logo-mark">IA</div><span class="logo-name">Instituto América</span></div>
+      <p>Colegio cristiano evangélico en Córdoba con más de 50 años formando estudiantes en valores, fe y excelencia académica.</p>
+    </div>
+    <div class="footer-col"><h4>Institución</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></div>
+    <div class="footer-col"><h4>Niveles</h4><a href="vida-academica.html#inicial">Nivel Inicial</a><a href="vida-academica.html#primario">Nivel Primario</a><a href="vida-academica.html#secundario">Nivel Secundario</a><a href="docentes.html">Docentes</a></div>
+    <div class="footer-col"><h4>Contacto</h4><span>Francisco del Prado 2662</span><span>Córdoba, Argentina</span><span>+54 9 351 123-4567</span><span>info@institutoamerica.com.ar</span></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Instituto América. Todos los derechos reservados.</p>
+    <div class="footer-right"><a href="https://deioweb.com.ar/SAG/" target="_blank">Autogestión</a><a href="contacto.html">Inscripciones</a><span class="footer-credit">Diseño: Kikar Agencia Digital</span></div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>50));
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

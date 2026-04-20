@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — Instituto América Córdoba</title>
+<meta name="description" content="Contactá al Instituto América para inscripciones, información académica o cualquier consulta. Francisco del Prado 2662, Córdoba.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.contacto-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+.admisiones-box { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 6px; padding: 1.8rem; margin-top: 2rem; }
+.admisiones-box h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+.admisiones-box p { font-size: 13px; color: rgba(255,255,255,.55); line-height: 1.7; font-weight: 300; margin-bottom: 1rem; }
+.detail-row { display: flex; gap: 10px; font-size: 13px; color: rgba(255,255,255,.65); margin-bottom: .6rem; align-items: flex-start; }
+.detail-row span:first-child { color: var(--naranja); flex-shrink: 0; font-size: 14px; margin-top: 1px; }
+.map-embed { width: 100%; height: 260px; border-radius: 6px; overflow: hidden; margin-top: 1.5rem; border: 1px solid rgba(255,255,255,.08); }
+.map-embed iframe { width: 100%; height: 100%; border: none; filter: grayscale(30%) contrast(1.1); }
+.email-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+.email-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 6px; padding: 1.2rem; }
+.email-card .nivel { font-size: 10px; font-weight: 600; color: var(--naranja); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .4rem; }
+.email-card a { font-size: 12.5px; color: rgba(255,255,255,.7); word-break: break-all; }
+.email-card a:hover { color: var(--naranja); }
+@media(max-width:1024px){ .contacto-layout { grid-template-columns: 1fr; } .email-cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo"><div class="nav-logo-mark">IA</div><div class="nav-logo-text">Instituto<br>América</div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="vida-academica.html">Vida Académica</a></li>
+    <li><a href="docentes.html">Docentes</a></li>
+    <li><a href="novedades.html">Novedades</a></li>
+    <li><a href="contacto.html" class="nav-cta active">Contacto</a></li>
+    <li><a href="https://deioweb.com.ar/SAG/" target="_blank" class="nav-autogestion">Autogestión ↗</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="vida-academica.html">Vida Académica</a><a href="docentes.html">Docentes</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a><a href="https://deioweb.com.ar/SAG/" target="_blank">Autogestión ↗</a>
+</div>
+
+<header class="page-header">
+  <div class="page-header-tag">Hablemos</div>
+  <h1>Estamos para acompañarte</h1>
+  <p>Contactanos para resolver tus dudas sobre inscripciones, aranceles, propuesta académica o cualquier consulta institucional.</p>
+</header>
+
+<section class="section section-darker">
+  <div class="contacto-layout">
+
+    <!-- INFO -->
+    <div class="reveal">
+      <div class="section-tag" style="color:var(--naranja)">Información de contacto</div>
+      <h2 class="section-title light" style="margin-bottom:1.5rem">Encontranos</h2>
+
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-text">
+          <strong>Dirección</strong>
+          <a href="https://www.google.com/maps/place/Francisco+del+Prado+2662,+X5012+C%C3%B3rdoba" target="_blank">Francisco del Prado 2662, Córdoba, Argentina</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div class="contact-text">
+          <strong>Teléfono / WhatsApp</strong>
+          <a href="https://wa.me/5493511234567">+54 9 351 123-4567</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-text">
+          <strong>Email institucional</strong>
+          <a href="mailto:info@institutoamerica.com.ar">info@institutoamerica.com.ar</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div class="contact-text">
+          <strong>Horario de atención</strong>
+          <span>Lunes a Viernes: 08:00 a 18:00 hs</span>
+        </div>
+      </div>
+
+      <!-- INSCRIPCIONES -->
+      <div class="admisiones-box">
+        <h3>Inscripciones 2026</h3>
+        <p>Para consultas específicas sobre matrículas e inscripciones podés escribirnos directamente a:</p>
+        <div class="email-cards">
+          <div class="email-card">
+            <div class="nivel">Inicial y Primario</div>
+            <a href="mailto:matriculainicialprimario@gmail.com">matriculainicialprimario@gmail.com</a>
+          </div>
+          <div class="email-card">
+            <div class="nivel">Secundario</div>
+            <a href="mailto:matriculasecundario@gmail.com">matriculasecundario@gmail.com</a>
+          </div>
+        </div>
+        <div style="margin-top:1.2rem">
+          <div class="detail-row"><span>📋</span><span>DNI del alumno, partida de nacimiento, certificado de vacunación y último boletín escolar</span></div>
+          <div class="detail-row"><span>🎓</span><span>Cupos disponibles en Inicial, Primario y Secundario</span></div>
+        </div>
+      </div>
+
+      <!-- AUTOGESTIÓN -->
+      <div style="margin-top:1.5rem">
+        <a href="https://deioweb.com.ar/SAG/" target="_blank" class="btn-ghost">Acceder a Autogestión familiar ↗</a>
+      </div>
+
+      <!-- MAPA -->
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.8!2d-64.155175!3d-31.376884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329825ca95c5f1%3A0xcb6a591462caffd0!2sFrancisco%20del%20Prado%202662%2C%20X5012%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="contacto-form reveal d1">
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;margin-bottom:1.4rem">Envianos un mensaje</h3>
+      <div class="form-row" style="margin-bottom:.9rem">
+        <div class="form-group"><label>Nombre</label><input type="text" placeholder="Tu nombre"></div>
+        <div class="form-group"><label>Apellido</label><input type="text" placeholder="Tu apellido"></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="tu@email.com"></div>
+      <div class="form-group"><label>Teléfono</label><input type="tel" placeholder="(351) 000-0000"></div>
+      <div class="form-group">
+        <label>Motivo de consulta</label>
+        <select>
+          <option value="" disabled selected>Seleccioná una opción</option>
+          <option>Inscripción Nivel Inicial</option>
+          <option>Inscripción Nivel Primario</option>
+          <option>Inscripción Nivel Secundario</option>
+          <option>Información académica</option>
+          <option>Aranceles y becas</option>
+          <option>Trabajo docente</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Mensaje</label><textarea placeholder="Contanos brevemente tu consulta..."></textarea></div>
+      <button class="btn-primary" style="width:100%;justify-content:center" onclick="handleSubmit(this)">Enviar mensaje →</button>
+      <p id="form-success" style="display:none;margin-top:1rem;font-size:13px;color:var(--naranja);text-align:center">✓ ¡Mensaje enviado! Nos comunicaremos a la brevedad.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="logo-row"><div class="logo-mark">IA</div><span class="logo-name">Instituto América</span></div><p>Colegio cristiano evangélico en Córdoba con más de 50 años formando estudiantes en valores, fe y excelencia académica.</p></div>
+    <div class="footer-col"><h4>Institución</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></div>
+    <div class="footer-col"><h4>Niveles</h4><a href="vida-academica.html#inicial">Nivel Inicial</a><a href="vida-academica.html#primario">Nivel Primario</a><a href="vida-academica.html#secundario">Nivel Secundario</a><a href="docentes.html">Docentes</a></div>
+    <div class="footer-col"><h4>Contacto</h4><span>Francisco del Prado 2662</span><span>Córdoba, Argentina</span><a href="https://wa.me/5493511234567">+54 9 351 123-4567</a><a href="mailto:info@institutoamerica.com.ar">info@institutoamerica.com.ar</a></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Instituto América. Todos los derechos reservados.</p>
+    <div class="footer-right"><a href="https://deioweb.com.ar/SAG/" target="_blank">Autogestión</a><a href="contacto.html">Inscripciones</a><span class="footer-credit">Diseño: Kikar Agencia Digital</span></div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>50));
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+function handleSubmit(btn){
+  btn.textContent='Enviando...';btn.disabled=true;
+  setTimeout(()=>{ btn.textContent='Enviado ✓'; document.getElementById('form-success').style.display='block'; },800);
+}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
