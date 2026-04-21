@@ -15,17 +15,29 @@
 .docente-placeholder:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(107,18,32,.12); }
 .docente-placeholder-img {
   aspect-ratio: 3/4;
-  background: linear-gradient(135deg, #f0e8e0 0%, #e0d0c0 100%);
+  background-size: cover;
+  background-position: center;
   display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden;
 }
 .docente-placeholder-img::before {
   content: ''; position: absolute; inset: 0;
-  background: radial-gradient(circle at 50% 30%, rgba(224,90,43,.1), transparent 60%);
+  background: linear-gradient(180deg, rgba(74,12,23,.65) 0%, rgba(74,12,23,.92) 100%);
 }
-.docente-placeholder-img span {
-  font-size: 3.2rem; opacity: .25; position: relative; z-index: 1;
+.docente-placeholder-img .ph-icon {
+  font-size: 2.6rem; opacity: .55; position: relative; z-index: 1;
+  color: #fff; filter: grayscale(0.3);
 }
+.docente-placeholder-img .ph-label {
+  position: absolute; bottom: 14px; left: 14px; right: 14px;
+  font-size: 10px; color: rgba(255,255,255,.55); text-align: center;
+  letter-spacing: .14em; text-transform: uppercase; z-index: 1;
+}
+.ph-bg-1 { background-image: url('https://trompo.ar/america/wp-content/uploads/2025/03/Instituto-America-28.jpg'); }
+.ph-bg-2 { background-image: url('https://trompo.ar/america/wp-content/uploads/2025/03/Instituto-America-82-1024x678.jpg'); }
+.ph-bg-3 { background-image: url('https://trompo.ar/america/wp-content/uploads/2025/06/056-scaled.jpg'); }
+.ph-bg-4 { background-image: url('https://trompo.ar/america/wp-content/uploads/2025/03/Instituto-America-25.jpg'); }
+.ph-bg-5 { background-image: url('https://trompo.ar/america/wp-content/uploads/2025/05/Instituto-America-17.webp'); }
 .docente-placeholder-body { padding: 1.2rem; }
 .docente-placeholder-body .cargo { font-size: 10px; font-weight: 600; color: var(--naranja); text-transform: uppercase; letter-spacing: .07em; margin-bottom: .3rem; }
 .docente-placeholder-body .nombre { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: rgba(74,12,23,.45); font-style: italic; }
@@ -100,9 +112,8 @@
   <div class="conduccion-grid">
 
     <div class="docente-card reveal">
-      <div class="docente-img-wrap docente-avatar">
-        <div class="docente-avatar-initials">DZ</div>
-        <div class="docente-avatar-note">Foto próximamente</div>
+      <div class="docente-img-wrap">
+        <img src="https://trompo.ar/america/wp-content/uploads/2024/10/205-scaled.jpg" alt="Prof. Débora Zapata">
       </div>
       <div class="docente-body">
         <div class="docente-cargo">Directora — Nivel Inicial y Primario</div>
@@ -112,9 +123,8 @@
     </div>
 
     <div class="docente-card reveal d1">
-      <div class="docente-img-wrap docente-avatar">
-        <div class="docente-avatar-initials">SR</div>
-        <div class="docente-avatar-note">Foto próximamente</div>
+      <div class="docente-img-wrap">
+        <img src="https://trompo.ar/america/wp-content/uploads/2024/10/206-scaled.jpg" alt="Prof. Silvia Débora Rico">
       </div>
       <div class="docente-body">
         <div class="docente-cargo">Vicedirectora — Nivel Inicial y Primario</div>
@@ -130,9 +140,9 @@
   <span class="nivel-tag">Nivel Inicial</span>
   <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--bordo);margin-bottom:1.5rem">Equipo docente — Nivel Inicial</h3>
   <div class="docentes-placeholder-grid">
-    <div class="docente-placeholder reveal"><div class="docente-placeholder-img"><span>👩‍🏫</span></div><div class="docente-placeholder-body"><div class="cargo">Sala de 3 años</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d1"><div class="docente-placeholder-img"><span>👩‍🏫</span></div><div class="docente-placeholder-body"><div class="cargo">Sala de 4 años</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d2"><div class="docente-placeholder-img"><span>👩‍🏫</span></div><div class="docente-placeholder-body"><div class="cargo">Sala de 5 años</div><div class="nombre">Próximamente</div></div></div>
+    <div class="docente-placeholder reveal"><div class="docente-placeholder-img ph-bg-1"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Sala de 3 años</div><div class="nombre">Próximamente</div></div></div>
+    <div class="docente-placeholder reveal d1"><div class="docente-placeholder-img ph-bg-2"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Sala de 4 años</div><div class="nombre">Próximamente</div></div></div>
+    <div class="docente-placeholder reveal d2"><div class="docente-placeholder-img ph-bg-3"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Sala de 5 años</div><div class="nombre">Próximamente</div></div></div>
   </div>
 </section>
 
@@ -140,9 +150,9 @@
   <span class="nivel-tag">Nivel Primario</span>
   <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--bordo);margin-bottom:1.5rem">Equipo docente — Nivel Primario</h3>
   <div class="docentes-placeholder-grid">
-    <div class="docente-placeholder reveal"><div class="docente-placeholder-img"><span>👩‍🏫</span></div><div class="docente-placeholder-body"><div class="cargo">1° y 2° Grado</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d1"><div class="docente-placeholder-img"><span>👩‍🏫</span></div><div class="docente-placeholder-body"><div class="cargo">3° y 4° Grado</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d2"><div class="docente-placeholder-img"><span>👩‍🏫</span></div><div class="docente-placeholder-body"><div class="cargo">5° y 6° Grado</div><div class="nombre">Próximamente</div></div></div>
+    <div class="docente-placeholder reveal"><div class="docente-placeholder-img ph-bg-4"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">1° y 2° Grado</div><div class="nombre">Próximamente</div></div></div>
+    <div class="docente-placeholder reveal d1"><div class="docente-placeholder-img ph-bg-5"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">3° y 4° Grado</div><div class="nombre">Próximamente</div></div></div>
+    <div class="docente-placeholder reveal d2"><div class="docente-placeholder-img ph-bg-1"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">5° y 6° Grado</div><div class="nombre">Próximamente</div></div></div>
   </div>
 </section>
 
@@ -150,9 +160,9 @@
   <span class="nivel-tag">Nivel Secundario</span>
   <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--bordo);margin-bottom:1.5rem">Equipo docente — Nivel Secundario</h3>
   <div class="docentes-placeholder-grid">
-    <div class="docente-placeholder reveal"><div class="docente-placeholder-img"><span>👨‍🏫</span></div><div class="docente-placeholder-body"><div class="cargo">Matemática / Ciencias</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d1"><div class="docente-placeholder-img"><span>👩‍🏫</span></div><div class="docente-placeholder-body"><div class="cargo">Lengua / Literatura</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d2"><div class="docente-placeholder-img"><span>👨‍🏫</span></div><div class="docente-placeholder-body"><div class="cargo">Historia / Geografía</div><div class="nombre">Próximamente</div></div></div>
+    <div class="docente-placeholder reveal"><div class="docente-placeholder-img ph-bg-2"><span class="ph-icon">👨‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Matemática / Ciencias</div><div class="nombre">Próximamente</div></div></div>
+    <div class="docente-placeholder reveal d1"><div class="docente-placeholder-img ph-bg-3"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Lengua / Literatura</div><div class="nombre">Próximamente</div></div></div>
+    <div class="docente-placeholder reveal d2"><div class="docente-placeholder-img ph-bg-4"><span class="ph-icon">👨‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Historia / Geografía</div><div class="nombre">Próximamente</div></div></div>
   </div>
   <p style="text-align:center;margin-top:2rem;font-size:13px;color:var(--gris);font-style:italic">La presentación completa del equipo docente estará disponible próximamente.</p>
 </section>

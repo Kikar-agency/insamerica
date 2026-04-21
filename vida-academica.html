@@ -18,7 +18,8 @@
 .nivel-section-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .nivel-section-inner.reverse { direction: rtl; }
 .nivel-section-inner.reverse > * { direction: ltr; }
-.nivel-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: top center; border-radius: 4px; }
+.nivel-img { width: 100%; height: auto; max-height: 520px; object-fit: contain; border-radius: 4px; align-self: stretch; }
+@media (min-width: 1025px) { .nivel-img { object-fit: cover; aspect-ratio: 4/3; object-position: center 30%; } }
 .nivel-badge {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--bordo); color: #fff; padding: 5px 14px;
@@ -107,7 +108,7 @@
         <a href="contacto.html" class="btn-primary btn-bordo">Consultar por Nivel Inicial →</a>
       </div>
     </div>
-    <img src="img/inicial.jpg" alt="Nivel Inicial Instituto América" class="nivel-img reveal d1">
+    <img src="https://trompo.ar/america/wp-content/uploads/2025/03/Instituto-America-28.jpg" alt="Nivel Inicial Instituto América" class="nivel-img reveal d1">
   </div>
 </section>
 </div>
@@ -137,7 +138,7 @@
         <a href="contacto.html" class="btn-primary btn-bordo">Consultar por Nivel Primario →</a>
       </div>
     </div>
-    <img src="img/primario.jpg" alt="Nivel Primario Instituto América" class="nivel-img reveal d1">
+    <img src="https://trompo.ar/america/wp-content/uploads/2025/03/Instituto-America-82-1024x678.jpg" alt="Nivel Primario Instituto América" class="nivel-img reveal d1">
   </div>
 </section>
 </div>
@@ -167,7 +168,7 @@
         <a href="contacto.html" class="btn-primary btn-bordo">Consultar por Nivel Secundario →</a>
       </div>
     </div>
-    <img src="img/secundario.jpg" alt="Nivel Secundario Instituto América" class="nivel-img reveal d1">
+    <img src="https://trompo.ar/america/wp-content/uploads/2025/06/056-scaled.jpg" alt="Nivel Secundario Instituto América" class="nivel-img reveal d1">
   </div>
 </section>
 </div>
