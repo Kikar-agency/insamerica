@@ -124,40 +124,52 @@
   <div class="section-tag">Explorá el Instituto</div>
   <h2 class="section-title" style="margin-bottom:2.5rem">Conocé cada<br>rincón de <em style="font-style:italic;color:var(--naranja)">América</em></h2>
   
-  <div class="slider-wrap reveal">
-    <div class="slider-nav">
-      <a href="vida-academica.html#inicial" class="slider-item active" data-slide="0">
-        <span class="slider-num">01</span>
-        <span class="slider-text">Nivel Inicial</span>
-        <span class="slider-arrow">→</span>
+  <div class="reveal" style="display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;align-items:center;min-height:440px" id="sliderWrap">
+    <!-- NAV -->
+    <div style="display:flex;flex-direction:column">
+      <a href="vida-academica.html#inicial" class="slider-item active" data-slide="0"
+         style="display:flex;align-items:center;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--gris-l);text-decoration:none;color:inherit;transition:all .3s;cursor:pointer">
+        <span class="slider-num" style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--naranja);min-width:40px;transition:color .3s">01</span>
+        <span class="slider-text" style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--bordo);flex:1;transition:color .3s">Nivel Inicial</span>
+        <span class="slider-arrow" style="font-size:1.3rem;color:var(--naranja);opacity:1;transition:all .3s">→</span>
       </a>
-      <a href="vida-academica.html#primario" class="slider-item" data-slide="1">
-        <span class="slider-num">02</span>
-        <span class="slider-text">Nivel Primario</span>
-        <span class="slider-arrow">→</span>
+      <a href="vida-academica.html#primario" class="slider-item" data-slide="1"
+         style="display:flex;align-items:center;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--gris-l);text-decoration:none;color:inherit;transition:all .3s;cursor:pointer">
+        <span class="slider-num" style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--gris-l);min-width:40px;transition:color .3s">02</span>
+        <span class="slider-text" style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:rgba(74,12,23,.22);flex:1;transition:color .3s">Nivel Primario</span>
+        <span class="slider-arrow" style="font-size:1.3rem;color:var(--naranja);opacity:0;transform:translateX(-8px);transition:all .3s">→</span>
       </a>
-      <a href="vida-academica.html#secundario" class="slider-item" data-slide="2">
-        <span class="slider-num">03</span>
-        <span class="slider-text">Nivel Secundario</span>
-        <span class="slider-arrow">→</span>
+      <a href="vida-academica.html#secundario" class="slider-item" data-slide="2"
+         style="display:flex;align-items:center;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--gris-l);text-decoration:none;color:inherit;transition:all .3s;cursor:pointer">
+        <span class="slider-num" style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--gris-l);min-width:40px;transition:color .3s">03</span>
+        <span class="slider-text" style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:rgba(74,12,23,.22);flex:1;transition:color .3s">Nivel Secundario</span>
+        <span class="slider-arrow" style="font-size:1.3rem;color:var(--naranja);opacity:0;transform:translateX(-8px);transition:all .3s">→</span>
       </a>
-      <a href="nosotros.html" class="slider-item" data-slide="3">
-        <span class="slider-num">04</span>
-        <span class="slider-text">Vida Escolar</span>
-        <span class="slider-arrow">→</span>
+      <a href="nosotros.html" class="slider-item" data-slide="3"
+         style="display:flex;align-items:center;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--gris-l);text-decoration:none;color:inherit;transition:all .3s;cursor:pointer">
+        <span class="slider-num" style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--gris-l);min-width:40px;transition:color .3s">04</span>
+        <span class="slider-text" style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:rgba(74,12,23,.22);flex:1;transition:color .3s">Vida Escolar</span>
+        <span class="slider-arrow" style="font-size:1.3rem;color:var(--naranja);opacity:0;transform:translateX(-8px);transition:all .3s">→</span>
       </a>
-      <a href="nosotros.html" class="slider-item" data-slide="4">
-        <span class="slider-num">05</span>
-        <span class="slider-text">Nosotros</span>
-        <span class="slider-arrow">→</span>
+      <a href="nosotros.html" class="slider-item" data-slide="4"
+         style="display:flex;align-items:center;gap:1rem;padding:1.1rem 0;text-decoration:none;color:inherit;transition:all .3s;cursor:pointer">
+        <span class="slider-num" style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--gris-l);min-width:40px;transition:color .3s">05</span>
+        <span class="slider-text" style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:rgba(74,12,23,.22);flex:1;transition:color .3s">Nosotros</span>
+        <span class="slider-arrow" style="font-size:1.3rem;color:var(--naranja);opacity:0;transform:translateX(-8px);transition:all .3s">→</span>
       </a>
     </div>
-    <div class="slider-images">
-      <img src="img/foto-inicial.jpg" alt="Nivel Inicial" class="slider-img active" data-index="0">
-      <img src="img/foto-primario.jpg" alt="Nivel Primario" class="slider-img" data-index="1">
-      <img src="img/foto-secundario.jpg" alt="Nivel Secundario" class="slider-img" data-index="2">
-      <img src="img/foto-general-2.jpg" alt="Vida Escolar" class="slider-img" data-index="3">
-      <img src="img/foto-general-1.jpg" alt="Nosotros" class="slider-img" data-index="4">
+    <!-- IMAGES -->
+    <div style="position:relative;aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:var(--gris-l)">
+      <img src="img/foto-inicial.jpg" alt="Nivel Inicial" class="slider-img active" data-index="0"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);transition:clip-path .65s cubic-bezier(.33,1,.68,1)">
+      <img src="img/foto-primario.jpg" alt="Nivel Primario" class="slider-img" data-index="1"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:polygon(0 0,100% 0,100% 0,0 0);transition:clip-path .65s cubic-bezier(.33,1,.68,1)">
+      <img src="img/foto-secundario.jpg" alt="Nivel Secundario" class="slider-img" data-index="2"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:polygon(0 0,100% 0,100% 0,0 0);transition:clip-path .65s cubic-bezier(.33,1,.68,1)">
+      <img src="img/foto-general-2.jpg" alt="Vida Escolar" class="slider-img" data-index="3"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:polygon(0 0,100% 0,100% 0,0 0);transition:clip-path .65s cubic-bezier(.33,1,.68,1)">
+      <img src="img/foto-general-1.jpg" alt="Nosotros" class="slider-img" data-index="4"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:polygon(0 0,100% 0,100% 0,0 0);transition:clip-path .65s cubic-bezier(.33,1,.68,1)">
     </div>
   </div>
 </section>
@@ -332,32 +344,67 @@ var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isInters
 document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
 
 // Slideshow hover
-document.querySelectorAll('.slider-item').forEach(function(item) {
-  item.addEventListener('mouseenter', function() {
-    var idx = this.getAttribute('data-slide');
-    document.querySelectorAll('.slider-item').forEach(function(s) { s.classList.remove('active'); });
-    document.querySelectorAll('.slider-img').forEach(function(img) { img.classList.remove('active'); });
-    this.classList.add('active');
-    var target = document.querySelector('.slider-img[data-index="' + idx + '"]');
-    if (target) target.classList.add('active');
+var sliderItems = document.querySelectorAll('.slider-item');
+var sliderImgs = document.querySelectorAll('.slider-img');
+var activeColor = 'var(--naranja)';
+var activeTxt = 'var(--bordo)';
+var inactiveNum = 'var(--gris-l)';
+var inactiveTxt = 'rgba(74,12,23,.22)';
+
+function activateSlide(idx) {
+  sliderItems.forEach(function(item, i) {
+    var num = item.querySelector('.slider-num');
+    var txt = item.querySelector('.slider-text');
+    var arrow = item.querySelector('.slider-arrow');
+    if (i == idx) {
+      num.style.color = activeColor;
+      txt.style.color = activeTxt;
+      arrow.style.opacity = '1';
+      arrow.style.transform = 'translateX(0)';
+    } else {
+      num.style.color = inactiveNum;
+      txt.style.color = inactiveTxt;
+      arrow.style.opacity = '0';
+      arrow.style.transform = 'translateX(-8px)';
+    }
+  });
+  sliderImgs.forEach(function(img, i) {
+    if (i == idx) {
+      img.style.clipPath = 'polygon(0 0, 100% 0, 100% 100%, 0 100%)';
+    } else {
+      img.style.clipPath = 'polygon(0 0, 100% 0, 100% 0, 0 0)';
+    }
+  });
+}
+
+sliderItems.forEach(function(item) {
+  item.addEventListener('mouseenter', function(e) {
+    e.preventDefault();
+    activateSlide(parseInt(this.getAttribute('data-slide')));
   });
 });
-// Auto-cycle on mobile (touch)
-var sliderAuto;
+
+// Auto-cycle on mobile
+var sliderAutoIdx = 0;
+var sliderAutoTimer;
 function startSliderAuto() {
-  var current = 0;
-  var items = document.querySelectorAll('.slider-item');
-  var imgs = document.querySelectorAll('.slider-img');
-  if (!items.length) return;
-  sliderAuto = setInterval(function() {
-    current = (current + 1) % items.length;
-    items.forEach(function(s) { s.classList.remove('active'); });
-    imgs.forEach(function(i) { i.classList.remove('active'); });
-    items[current].classList.add('active');
-    imgs[current].classList.add('active');
+  sliderAutoTimer = setInterval(function() {
+    sliderAutoIdx = (sliderAutoIdx + 1) % sliderItems.length;
+    activateSlide(sliderAutoIdx);
   }, 3000);
 }
-if (window.innerWidth < 1024) startSliderAuto();
+if (window.innerWidth < 1024 && sliderItems.length) startSliderAuto();
+// Responsive slider: stack on mobile
+if (window.innerWidth < 768) {
+  var sw = document.getElementById('sliderWrap');
+  if (sw) { sw.style.gridTemplateColumns = '1fr'; sw.style.minHeight = 'auto'; }
+  sliderItems.forEach(function(item) {
+    var txt = item.querySelector('.slider-text');
+    var num = item.querySelector('.slider-num');
+    if (txt) txt.style.fontSize = '1.2rem';
+    if (num) num.style.fontSize = '1.2rem';
+  });
+}
 
 // Theme switch
 document.getElementById('btnOriginal').addEventListener('click', function(){ setTheme('original'); });
