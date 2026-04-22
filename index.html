@@ -280,6 +280,20 @@ window.addEventListener('scroll',()=>document.getElementById('navbar').classList
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Theme switch
+function setTheme(theme) {
+  if (theme === 'institucional') {
+    document.documentElement.setAttribute('data-theme', 'institucional');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  document.querySelectorAll('.theme-switch button').forEach(b => b.classList.remove('active'));
+  var btn = document.querySelector(theme === 'institucional' ? '.btn-institucional' : '.btn-original');
+  if (btn) btn.classList.add('active');
+  try { localStorage.setItem('ia-theme', theme); } catch(e) {}
+}
+(function(){ try { var t = localStorage.getItem('ia-theme'); if (t) setTheme(t); } catch(e) {} })();
 </script>
 
 <!-- THEME SWITCH (dev only — remove before delivery) -->

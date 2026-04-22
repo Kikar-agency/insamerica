@@ -156,10 +156,7 @@ const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.targ
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 
-<!-- THEME SWITCH (dev only — remove before delivery) -->
-<div class="theme-switch" id="themeSwitch">
-  <div class="theme-switch-label">Modo prueba colores</div>
-  <button class="btn-original active" onclick="setTheme('original')">Bordo / Naranja</button>
+<button class="btn-original active" onclick="setTheme('original')">Bordo / Naranja</button>
   <button class="btn-institucional" onclick="setTheme('institucional')">Azul / Mostaza</button>
 </div>
 
