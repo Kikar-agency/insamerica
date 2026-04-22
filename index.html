@@ -47,7 +47,7 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-img-half">
-    <img src="https://trompo.ar/america/wp-content/uploads/2025/05/Instituto-America-17.webp" alt="Alumnos Instituto América">
+    <img src="img/foto-general-5.jpg" alt="Alumnos Instituto América">
   </div>
   <div class="hero-content">
     <div class="hero-eyebrow">Córdoba, Argentina · Desde 1966</div>
@@ -81,7 +81,7 @@
 <section class="section">
   <div class="nosotros-grid">
     <div class="nosotros-img-wrap reveal">
-      <img src="https://trompo.ar/america/wp-content/uploads/2025/03/Instituto-America-25.jpg" alt="Patio Instituto América">
+      <img src="img/foto-general-1.jpg" alt="Patio Instituto América">
       <div class="accent-box">
         <div class="accent-num">50</div>
         <div class="accent-lbl">Años<br>educando</div>
@@ -119,13 +119,56 @@
   <p style="color:rgba(255,255,255,.3);font-size:11px;margin-top:1rem;font-style:italic">Instituto América · Córdoba, Argentina · Desde 1966</p>
 </section>
 
+<!-- SLIDESHOW EXPLORAR -->
+<section class="section" style="padding:5rem 3rem;overflow:hidden" id="explorar">
+  <div class="section-tag">Explorá el Instituto</div>
+  <h2 class="section-title" style="margin-bottom:2.5rem">Conocé cada<br>rincón de <em style="font-style:italic;color:var(--naranja)">América</em></h2>
+  
+  <div class="slider-wrap reveal">
+    <div class="slider-nav">
+      <a href="vida-academica.html#inicial" class="slider-item active" data-slide="0">
+        <span class="slider-num">01</span>
+        <span class="slider-text">Nivel Inicial</span>
+        <span class="slider-arrow">→</span>
+      </a>
+      <a href="vida-academica.html#primario" class="slider-item" data-slide="1">
+        <span class="slider-num">02</span>
+        <span class="slider-text">Nivel Primario</span>
+        <span class="slider-arrow">→</span>
+      </a>
+      <a href="vida-academica.html#secundario" class="slider-item" data-slide="2">
+        <span class="slider-num">03</span>
+        <span class="slider-text">Nivel Secundario</span>
+        <span class="slider-arrow">→</span>
+      </a>
+      <a href="nosotros.html" class="slider-item" data-slide="3">
+        <span class="slider-num">04</span>
+        <span class="slider-text">Vida Escolar</span>
+        <span class="slider-arrow">→</span>
+      </a>
+      <a href="nosotros.html" class="slider-item" data-slide="4">
+        <span class="slider-num">05</span>
+        <span class="slider-text">Nosotros</span>
+        <span class="slider-arrow">→</span>
+      </a>
+    </div>
+    <div class="slider-images">
+      <img src="img/foto-inicial.jpg" alt="Nivel Inicial" class="slider-img active" data-index="0">
+      <img src="img/foto-primario.jpg" alt="Nivel Primario" class="slider-img" data-index="1">
+      <img src="img/foto-secundario.jpg" alt="Nivel Secundario" class="slider-img" data-index="2">
+      <img src="img/foto-general-2.jpg" alt="Vida Escolar" class="slider-img" data-index="3">
+      <img src="img/foto-general-1.jpg" alt="Nosotros" class="slider-img" data-index="4">
+    </div>
+  </div>
+</section>
+
 <!-- NIVELES -->
 <section class="section section-dark" id="niveles">
   <div class="section-tag" style="color:var(--naranja)">Oferta educativa</div>
   <h2 class="section-title section-title-light" style="margin-bottom:.4rem">Tres niveles,<br>un mismo camino</h2>
   <div class="niveles-grid">
     <a href="vida-academica.html#inicial" class="nivel-card reveal">
-      <img src="https://trompo.ar/america/wp-content/uploads/2025/03/Instituto-America-28.jpg" alt="Nivel Inicial">
+      <img src="img/foto-inicial.jpg" alt="Nivel Inicial">
       <div class="nivel-overlay">
         <span class="nivel-num">01</span>
         <span class="nivel-name">Nivel Inicial</span>
@@ -134,7 +177,7 @@
       </div>
     </a>
     <a href="vida-academica.html#primario" class="nivel-card reveal reveal-delay-1">
-      <img src="https://trompo.ar/america/wp-content/uploads/2025/03/Instituto-America-82-1024x678.jpg" alt="Nivel Primario">
+      <img src="img/foto-primario.jpg" alt="Nivel Primario">
       <div class="nivel-overlay">
         <span class="nivel-num">02</span>
         <span class="nivel-name">Nivel Primario</span>
@@ -143,7 +186,7 @@
       </div>
     </a>
     <a href="vida-academica.html#secundario" class="nivel-card reveal reveal-delay-2">
-      <img src="https://trompo.ar/america/wp-content/uploads/2025/06/056-scaled.jpg" alt="Nivel Secundario">
+      <img src="img/foto-secundario.jpg" alt="Nivel Secundario">
       <div class="nivel-overlay">
         <span class="nivel-num">03</span>
         <span class="nivel-name">Nivel Secundario</span>
@@ -287,6 +330,34 @@ window.addEventListener('scroll',()=>document.getElementById('navbar').classList
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
 var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+
+// Slideshow hover
+document.querySelectorAll('.slider-item').forEach(function(item) {
+  item.addEventListener('mouseenter', function() {
+    var idx = this.getAttribute('data-slide');
+    document.querySelectorAll('.slider-item').forEach(function(s) { s.classList.remove('active'); });
+    document.querySelectorAll('.slider-img').forEach(function(img) { img.classList.remove('active'); });
+    this.classList.add('active');
+    var target = document.querySelector('.slider-img[data-index="' + idx + '"]');
+    if (target) target.classList.add('active');
+  });
+});
+// Auto-cycle on mobile (touch)
+var sliderAuto;
+function startSliderAuto() {
+  var current = 0;
+  var items = document.querySelectorAll('.slider-item');
+  var imgs = document.querySelectorAll('.slider-img');
+  if (!items.length) return;
+  sliderAuto = setInterval(function() {
+    current = (current + 1) % items.length;
+    items.forEach(function(s) { s.classList.remove('active'); });
+    imgs.forEach(function(i) { i.classList.remove('active'); });
+    items[current].classList.add('active');
+    imgs[current].classList.add('active');
+  }, 3000);
+}
+if (window.innerWidth < 1024) startSliderAuto();
 
 // Theme switch
 document.getElementById('btnOriginal').addEventListener('click', function(){ setTheme('original'); });
