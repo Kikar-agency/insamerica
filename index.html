@@ -17,7 +17,7 @@
 <!-- NAV -->
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">IA</div>
+    <img src="img/escudo.png" alt="Instituto América" class="nav-escudo" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0">
     <div class="nav-logo-text">Instituto<br>América</div>
   </a>
   <ul class="nav-links">
@@ -50,7 +50,7 @@
     <img src="https://trompo.ar/america/wp-content/uploads/2025/05/Instituto-America-17.webp" alt="Alumnos Instituto América">
   </div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Córdoba, Argentina · Desde 1974</div>
+    <div class="hero-eyebrow">Córdoba, Argentina · Desde 1966</div>
     <h1 class="hero-title">
       Formamos personas,<br>
       <em>construimos</em><br>
@@ -91,7 +91,7 @@
       <div class="section-tag">Nuestra institución</div>
       <h2 class="section-title section-title-dark" style="margin-bottom:1.2rem">Una comunidad educativa con identidad y propósito</h2>
       <p style="font-size:1rem;line-height:1.8;color:#4A3038;font-weight:300;margin-bottom:1rem">Somos un colegio cristiano evangélico dedicado a la formación integral de nuestros estudiantes. Nuestro objetivo es educar para la vida, desarrollando el potencial de cada alumno en un ambiente de amor, respeto y compromiso con Dios.</p>
-      <p style="font-size:1rem;line-height:1.8;color:#4A3038;font-weight:300">Desde 1974 construimos una comunidad donde docentes, familias y alumnos caminan juntos hacia un horizonte de crecimiento personal y colectivo.</p>
+      <p style="font-size:1rem;line-height:1.8;color:#4A3038;font-weight:300">Desde 1966 construimos una comunidad donde docentes, familias y alumnos caminan juntos hacia un horizonte de crecimiento personal y colectivo.</p>
       <div class="pilares">
         <div class="pilar"><div class="pilar-t">Misión</div><div class="pilar-d">Educar para la vida con excelencia y valores cristianos</div></div>
         <div class="pilar"><div class="pilar-t">Visión</div><div class="pilar-d">Ser referentes en educación cristiana en Córdoba</div></div>
@@ -103,6 +103,20 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- VIDEO INSTITUCIONAL -->
+<section class="section section-mid" style="text-align:center">
+  <div class="section-tag" style="color:var(--naranja);justify-content:center">Nuestra historia</div>
+  <h2 class="section-title light" style="margin-bottom:.5rem">50 años formando generaciones</h2>
+  <p style="color:rgba(255,255,255,.55);max-width:520px;margin:0 auto 2rem;font-size:14px;line-height:1.7;font-weight:300">Conocé la historia del Instituto América en este video institucional.</p>
+  <div style="max-width:800px;margin:0 auto;border-radius:8px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.3);aspect-ratio:16/9;position:relative;background:#000">
+    <video controls playsinline preload="metadata" poster="img/patio.jpg" style="width:100%;height:100%;object-fit:cover">
+      <source src="https://trompo.ar/america/wp-content/uploads/2025/07/America-50-anos-V.-COMPLETA_reducido-1.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+  </div>
+  <p style="color:rgba(255,255,255,.3);font-size:11px;margin-top:1rem;font-style:italic">Instituto América · Córdoba, Argentina · Desde 1966</p>
 </section>
 
 <!-- NIVELES -->
@@ -248,7 +262,7 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="logo-row"><div class="logo-mark">IA</div><span class="logo-name">Instituto América</span></div>
+      <div class="logo-row"><img src="img/escudo.png" alt="IA" style="width:30px;height:30px;border-radius:50%;object-fit:cover"><span class="logo-name">Instituto América</span></div>
       <p>Colegio cristiano evangélico en Córdoba con más de 50 años formando estudiantes en valores, fe y excelencia académica.</p>
     </div>
     <div class="footer-col"><h4>Institución</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></div>
@@ -267,5 +281,13 @@ function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('op
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+
+<!-- THEME SWITCH (dev only — remove before delivery) -->
+<div class="theme-switch" id="themeSwitch">
+  <div class="theme-switch-label">Modo prueba colores</div>
+  <button class="btn-original active" onclick="setTheme('original')">Bordo / Naranja</button>
+  <button class="btn-institucional" onclick="setTheme('institucional')">Azul / Mostaza</button>
+</div>
+
 </body>
 </html>

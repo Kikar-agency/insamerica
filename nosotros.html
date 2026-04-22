@@ -27,7 +27,7 @@
 
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">IA</div>
+    <img src="img/escudo.png" alt="Instituto América" class="nav-escudo" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0">
     <div class="nav-logo-text">Instituto<br>América</div>
   </a>
   <ul class="nav-links">
@@ -55,7 +55,7 @@
 <header class="page-header">
   <div class="page-header-tag">Nuestra institución</div>
   <h1>¿Quiénes somos?</h1>
-  <p>Conocé los valores, la historia y la comunidad que construimos juntos desde 1974.</p>
+  <p>Conocé los valores, la historia y la comunidad que construimos juntos desde 1966.</p>
 </header>
 
 <!-- INTRO -->
@@ -113,7 +113,7 @@
       <h2 class="section-title" style="margin-bottom:1.5rem">Más de 50 años<br>formando generaciones</h2>
       <div class="historia-text">
         <div class="historia-item">
-          <div class="historia-year">1974</div>
+          <div class="historia-year">1966</div>
           <div>
             <h4>Fundación</h4>
             <p>Instituto América nació por iniciativa de un grupo de personas de la comunidad cristiana evangélica de Córdoba, con la convicción de que la educación basada en valores bíblicos transforma vidas y comunidades.</p>
@@ -168,7 +168,7 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="logo-row"><div class="logo-mark">IA</div><span class="logo-name">Instituto América</span></div>
+      <div class="logo-row"><img src="img/escudo.png" alt="IA" style="width:30px;height:30px;border-radius:50%;object-fit:cover"><span class="logo-name">Instituto América</span></div>
       <p>Colegio cristiano evangélico en Córdoba con más de 50 años formando estudiantes en valores, fe y excelencia académica.</p>
     </div>
     <div class="footer-col"><h4>Institución</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></div>
@@ -187,5 +187,13 @@ function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('op
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+
+<!-- THEME SWITCH (dev only — remove before delivery) -->
+<div class="theme-switch" id="themeSwitch">
+  <div class="theme-switch-label">Modo prueba colores</div>
+  <button class="btn-original active" onclick="setTheme('original')">Bordo / Naranja</button>
+  <button class="btn-institucional" onclick="setTheme('institucional')">Azul / Mostaza</button>
+</div>
+
 </body>
 </html>

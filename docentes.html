@@ -10,81 +10,30 @@
 <link rel="stylesheet" href="css/styles.css">
 <style>
 .conduccion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 760px; }
-.docentes-placeholder-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 1.5rem; }
-.docente-placeholder { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 12px rgba(107,18,32,.06); transition: transform .3s, box-shadow .3s; }
-.docente-placeholder:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(107,18,32,.12); }
-.docente-placeholder-img {
-  aspect-ratio: 3/4;
-  background-size: cover;
-  background-position: center;
-  display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
-}
-.docente-placeholder-img::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(74,12,23,.65) 0%, rgba(74,12,23,.92) 100%);
-}
-.docente-placeholder-img .ph-icon {
-  font-size: 2.6rem; opacity: .55; position: relative; z-index: 1;
-  color: #fff; filter: grayscale(0.3);
-}
-.docente-placeholder-img .ph-label {
-  position: absolute; bottom: 14px; left: 14px; right: 14px;
-  font-size: 10px; color: rgba(255,255,255,.55); text-align: center;
-  letter-spacing: .14em; text-transform: uppercase; z-index: 1;
-}
-.ph-bg-1 { background-image: url('https://trompo.ar/america/wp-content/uploads/2025/03/Instituto-America-28.jpg'); }
-.ph-bg-2 { background-image: url('https://trompo.ar/america/wp-content/uploads/2025/03/Instituto-America-82-1024x678.jpg'); }
-.ph-bg-3 { background-image: url('https://trompo.ar/america/wp-content/uploads/2025/06/056-scaled.jpg'); }
-.ph-bg-4 { background-image: url('https://trompo.ar/america/wp-content/uploads/2025/03/Instituto-America-25.jpg'); }
-.ph-bg-5 { background-image: url('https://trompo.ar/america/wp-content/uploads/2025/05/Instituto-America-17.webp'); }
-.docente-placeholder-body { padding: 1.2rem; }
-.docente-placeholder-body .cargo { font-size: 10px; font-weight: 600; color: var(--naranja); text-transform: uppercase; letter-spacing: .07em; margin-bottom: .3rem; }
-.docente-placeholder-body .nombre { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: rgba(74,12,23,.45); font-style: italic; }
-.nivel-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--bordo); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1.2rem; }
-
-/* Initials avatar for conducción cards */
-.docente-avatar {
-  aspect-ratio: 3/4;
-  background: linear-gradient(135deg, var(--bordo) 0%, var(--bordo2) 100%);
-  display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
-}
-.docente-avatar::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(circle at 50% 40%, rgba(224,90,43,.35), transparent 60%);
-}
-.docente-avatar::after {
-  content: ''; position: absolute; right: -40%; top: -30%;
-  width: 100%; height: 100%;
-  background: radial-gradient(circle, rgba(224,90,43,.25), transparent 70%);
-}
-.docente-avatar-initials {
-  font-family: 'Playfair Display', serif;
-  font-size: 4.5rem; font-weight: 700; color: #fff;
-  line-height: 1; position: relative; z-index: 2;
-  letter-spacing: -.04em;
-}
-.docente-avatar-note {
-  position: absolute; bottom: 12px; left: 12px; right: 12px;
-  font-size: 9px; color: rgba(255,255,255,.35); text-align: center;
-  letter-spacing: .12em; text-transform: uppercase; z-index: 2;
-}
-
-@media(max-width:1024px){
+.equipo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
+.equipo-card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 12px rgba(107,18,32,.06); transition: transform .3s, box-shadow .3s; }
+.equipo-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(107,18,32,.12); }
+.equipo-card-img { aspect-ratio: 3/4; overflow: hidden; background: var(--gris-l); }
+.equipo-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .4s; display: block; }
+.equipo-card:hover .equipo-card-img img { transform: scale(1.03); }
+.equipo-card-body { padding: 1rem 1.2rem; text-align: center; }
+.equipo-card-cargo { font-size: 10px; font-weight: 600; color: var(--naranja); text-transform: uppercase; letter-spacing: .07em; margin-bottom: .3rem; }
+.equipo-card-nombre { font-family: 'Playfair Display', serif; font-size: .95rem; font-weight: 700; color: var(--bordo); line-height: 1.3; }
+@media(max-width:1024px) {
   .conduccion-grid { grid-template-columns: 1fr 1fr; max-width: 640px; }
-  .docentes-placeholder-grid { grid-template-columns: 1fr 1fr; }
+  .equipo-grid { grid-template-columns: repeat(3, 1fr); }
 }
-@media(max-width:640px){
-  .conduccion-grid { grid-template-columns: 1fr; max-width: 360px; }
-  .docentes-placeholder-grid { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
+@media(max-width:768px) {
+  .conduccion-grid { grid-template-columns: 1fr; max-width: 380px; }
+  .equipo-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
 }
+@media(max-width:480px) { .equipo-grid { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
 <body>
 
 <nav id="navbar">
-  <a href="index.html" class="nav-logo"><div class="nav-logo-mark">IA</div><div class="nav-logo-text">Instituto<br>América</div></a>
+  <a href="index.html" class="nav-logo"><img src="img/escudo.png" alt="Instituto América" class="nav-escudo" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0"><div class="nav-logo-text">Instituto<br>América</div></a>
   <ul class="nav-links">
     <li><a href="index.html">Inicio</a></li>
     <li><a href="nosotros.html">Nosotros</a></li>
@@ -106,11 +55,11 @@
   <p>Profesionales comprometidos con la formación integral de nuestros alumnos, desde la fe cristiana y la excelencia académica.</p>
 </header>
 
+<!-- CONDUCCION -->
 <section class="section">
   <div class="section-tag">Conducción institucional</div>
   <h2 class="section-title" style="margin-bottom:2rem">Equipo directivo</h2>
   <div class="conduccion-grid">
-
     <div class="docente-card reveal">
       <div class="docente-img-wrap">
         <img src="https://trompo.ar/america/wp-content/uploads/2024/10/205-scaled.jpg" alt="Prof. Débora Zapata">
@@ -121,7 +70,6 @@
         <p class="docente-bio">Docente por vocación, graduada en 1993. Se incorporó al Instituto América en 2006, proveniente de una escuela hermanada por la misma fe cristiana. Su trayectoria y compromiso con la educación la convierten en un pilar fundamental de nuestra comunidad.</p>
       </div>
     </div>
-
     <div class="docente-card reveal d1">
       <div class="docente-img-wrap">
         <img src="https://trompo.ar/america/wp-content/uploads/2024/10/206-scaled.jpg" alt="Prof. Silvia Débora Rico">
@@ -132,41 +80,60 @@
         <p class="docente-bio">Educadora con una sólida trayectoria académica y profesional, se ha destacado por su dedicación y compromiso en el ámbito educativo y social. Un referente de calidez, rigor pedagógico y compromiso cristiano para toda nuestra comunidad.</p>
       </div>
     </div>
-
   </div>
 </section>
 
-<section class="section" style="background:#fdfaf7;padding-top:0">
-  <span class="nivel-tag">Nivel Inicial</span>
-  <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--bordo);margin-bottom:1.5rem">Equipo docente — Nivel Inicial</h3>
-  <div class="docentes-placeholder-grid">
-    <div class="docente-placeholder reveal"><div class="docente-placeholder-img ph-bg-1"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Sala de 3 años</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d1"><div class="docente-placeholder-img ph-bg-2"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Sala de 4 años</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d2"><div class="docente-placeholder-img ph-bg-3"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Sala de 5 años</div><div class="nombre">Próximamente</div></div></div>
+<!-- EQUIPO DOCENTE -->
+<section class="section" style="background:#fdfaf7">
+  <div class="section-tag">Nuestro equipo</div>
+  <h2 class="section-title" style="margin-bottom:.5rem">Cuerpo docente</h2>
+  <p style="font-size:14px;color:var(--gris);font-weight:300;margin-bottom:0">El equipo de profesionales que acompaña día a día la formación de nuestros alumnos.</p>
+
+  <div class="equipo-grid">
+    <div class="equipo-card reveal">
+      <div class="equipo-card-img"><img src="img/docente-cativa-nadia.jpg" alt="Prof. Cativa Nadia S."></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. Cativa Nadia S.</div></div>
+    </div>
+    <div class="equipo-card reveal d1">
+      <div class="equipo-card-img"><img src="img/docente-ballesteros-soledad.jpg" alt="Prof. Ballesteros Soledad"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. Ballesteros Soledad</div></div>
+    </div>
+    <div class="equipo-card reveal d2">
+      <div class="equipo-card-img"><img src="img/docente-larosa-silvana.jpg" alt="Prof. La Rosa Silvana"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. La Rosa Silvana</div></div>
+    </div>
+    <div class="equipo-card reveal d3">
+      <div class="equipo-card-img"><img src="img/docente-tosini-silvina.jpg" alt="Prof. Tosini Silvina"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. Tosini Silvina</div></div>
+    </div>
+    <div class="equipo-card reveal">
+      <div class="equipo-card-img"><img src="img/docente-gonzalez-jonatan.jpg" alt="Prof. González Jonatan"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. González Jonatan</div></div>
+    </div>
+    <div class="equipo-card reveal d1">
+      <div class="equipo-card-img"><img src="img/docente-picolet-sonia.jpg" alt="Prof. Picolet Sonia"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. Picolet Sonia</div></div>
+    </div>
+    <div class="equipo-card reveal d2">
+      <div class="equipo-card-img"><img src="img/docente-garcia-dolores.jpg" alt="Prof. Rosa M. Dolores García"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Dirección</div><div class="equipo-card-nombre">Prof. Rosa M. Dolores García</div></div>
+    </div>
+    <div class="equipo-card reveal d3">
+      <div class="equipo-card-img"><img src="img/docente-gonzalez-elizabeth.jpg" alt="González Elizabeth"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Preceptor</div><div class="equipo-card-nombre">González Elizabeth</div></div>
+    </div>
+    <div class="equipo-card reveal">
+      <div class="equipo-card-img"><img src="img/docente-montenegro-lorena.jpg" alt="Montenegro Lorena"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Preceptor</div><div class="equipo-card-nombre">Montenegro Lorena</div></div>
+    </div>
+    <div class="equipo-card reveal d1">
+      <div class="equipo-card-img"><img src="img/docente-zarza-daniela.jpg" alt="Zarza Daniela"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Preceptor</div><div class="equipo-card-nombre">Zarza Daniela</div></div>
+    </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
-  <span class="nivel-tag">Nivel Primario</span>
-  <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--bordo);margin-bottom:1.5rem">Equipo docente — Nivel Primario</h3>
-  <div class="docentes-placeholder-grid">
-    <div class="docente-placeholder reveal"><div class="docente-placeholder-img ph-bg-4"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">1° y 2° Grado</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d1"><div class="docente-placeholder-img ph-bg-5"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">3° y 4° Grado</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d2"><div class="docente-placeholder-img ph-bg-1"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">5° y 6° Grado</div><div class="nombre">Próximamente</div></div></div>
-  </div>
-</section>
-
-<section class="section" style="background:#fdfaf7;padding-top:0">
-  <span class="nivel-tag">Nivel Secundario</span>
-  <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--bordo);margin-bottom:1.5rem">Equipo docente — Nivel Secundario</h3>
-  <div class="docentes-placeholder-grid">
-    <div class="docente-placeholder reveal"><div class="docente-placeholder-img ph-bg-2"><span class="ph-icon">👨‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Matemática / Ciencias</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d1"><div class="docente-placeholder-img ph-bg-3"><span class="ph-icon">👩‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Lengua / Literatura</div><div class="nombre">Próximamente</div></div></div>
-    <div class="docente-placeholder reveal d2"><div class="docente-placeholder-img ph-bg-4"><span class="ph-icon">👨‍🏫</span><div class="ph-label">Foto próximamente</div></div><div class="docente-placeholder-body"><div class="cargo">Historia / Geografía</div><div class="nombre">Próximamente</div></div></div>
-  </div>
-  <p style="text-align:center;margin-top:2rem;font-size:13px;color:var(--gris);font-style:italic">La presentación completa del equipo docente estará disponible próximamente.</p>
-</section>
-
+<!-- CTA -->
 <section class="section section-dark" style="text-align:center">
   <h2 class="section-title light" style="margin-bottom:1rem">¿Querés trabajar con nosotros?</h2>
   <p style="color:rgba(255,255,255,.6);max-width:460px;margin:0 auto 2rem;font-size:14px;line-height:1.7;font-weight:300">Si sos docente y compartís nuestra visión educativa cristiana, contactanos.</p>
@@ -175,7 +142,7 @@
 
 <footer>
   <div class="footer-grid">
-    <div class="footer-brand"><div class="logo-row"><div class="logo-mark">IA</div><span class="logo-name">Instituto América</span></div><p>Colegio cristiano evangélico en Córdoba con más de 50 años formando estudiantes en valores, fe y excelencia académica.</p></div>
+    <div class="footer-brand"><div class="logo-row"><img src="img/escudo.png" alt="IA" style="width:30px;height:30px;border-radius:50%;object-fit:cover"><span class="logo-name">Instituto América</span></div><p>Colegio cristiano evangélico en Córdoba con más de 50 años formando estudiantes en valores, fe y excelencia académica.</p></div>
     <div class="footer-col"><h4>Institución</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></div>
     <div class="footer-col"><h4>Niveles</h4><a href="vida-academica.html#inicial">Nivel Inicial</a><a href="vida-academica.html#primario">Nivel Primario</a><a href="vida-academica.html#secundario">Nivel Secundario</a><a href="docentes.html">Docentes</a></div>
     <div class="footer-col"><h4>Contacto</h4><span>Francisco del Prado 2662</span><span>Córdoba, Argentina</span><span>+54 9 351 123-4567</span><span>info@institutoamerica.com.ar</span></div>
@@ -186,11 +153,26 @@
   </div>
 </footer>
 
+<!-- THEME SWITCH (dev only — remove before delivery) -->
+<div class="theme-switch" id="themeSwitch">
+  <div class="theme-switch-label">Modo prueba colores</div>
+  <button class="btn-original active" onclick="setTheme('original')">Bordo / Naranja</button>
+  <button class="btn-institucional" onclick="setTheme('institucional')">Azul / Mostaza</button>
+</div>
+
 <script>
 window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>50));
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function setTheme(theme) {
+  if (theme === 'institucional') { document.documentElement.setAttribute('data-theme', 'institucional'); }
+  else { document.documentElement.removeAttribute('data-theme'); }
+  document.querySelectorAll('.theme-switch button').forEach(b => b.classList.remove('active'));
+  document.querySelector(theme === 'institucional' ? '.btn-institucional' : '.btn-original').classList.add('active');
+  localStorage.setItem('ia-theme', theme);
+}
+(function(){ var t = localStorage.getItem('ia-theme'); if (t) setTheme(t); })();
 </script>
 </body>
 </html>

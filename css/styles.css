@@ -17,6 +17,121 @@
   --gris-l:   #E8E0DC;
 }
 html { scroll-behavior: smooth; }
+
+/* ─── ALTERNATE PALETTE (institutional escudo colors) ─── */
+[data-theme="institucional"] {
+  --bordo:    #86162E;
+  --bordo2:   #6B1124;
+  --bordo3:   #A01E38;
+  --naranja:  #C99616;
+  --naranja2: #D9A82A;
+  --crema:    #F5F2EB;
+  --oscuro:   #0F0A1E;
+  --texto:    #1E1830;
+  --gris:     #5A5570;
+}
+[data-theme="institucional"] nav {
+  background: rgba(39,36,93,0.97);
+}
+[data-theme="institucional"] nav.scrolled {
+  box-shadow: 0 4px 24px rgba(39,36,93,.4);
+}
+[data-theme="institucional"] .page-header,
+[data-theme="institucional"] .section-dark,
+[data-theme="institucional"] .versiculo {
+  background: #27245D;
+}
+[data-theme="institucional"] .section-darker {
+  background: #0F0A1E;
+}
+[data-theme="institucional"] .section-mid {
+  background: #352E6B;
+}
+[data-theme="institucional"] .values-strip {
+  background: #27245D;
+}
+[data-theme="institucional"] .hero {
+  background: #27245D;
+}
+[data-theme="institucional"] .hero-bg {
+  background: radial-gradient(ellipse at 70% 50%, rgba(201,150,22,.12) 0%, transparent 60%),
+              linear-gradient(135deg, #27245D 0%, #0F0A1E 100%);
+}
+[data-theme="institucional"] .hero-img-half::before {
+  background: linear-gradient(to right, #27245D 0%, transparent 40%);
+}
+[data-theme="institucional"] .nivel-card::before {
+  background: linear-gradient(to top, rgba(15,10,30,.9) 0%, rgba(15,10,30,.2) 50%, transparent 100%);
+}
+[data-theme="institucional"] .mision-card,
+[data-theme="institucional"] .docente-card,
+[data-theme="institucional"] .novedad-card,
+[data-theme="institucional"] .novedad-full {
+  border-top-color: var(--naranja);
+}
+[data-theme="institucional"] .pilar {
+  border-left-color: var(--naranja);
+  background: rgba(39,36,93,.06);
+}
+[data-theme="institucional"] .section-title {
+  color: #27245D;
+}
+[data-theme="institucional"] .novedad-title,
+[data-theme="institucional"] .docente-nombre {
+  color: #27245D;
+}
+[data-theme="institucional"] .nivel-badge,
+[data-theme="institucional"] .nivel-tag {
+  background: #27245D;
+}
+[data-theme="institucional"] footer {
+  background: #0F0A1E;
+}
+[data-theme="institucional"] .nav-cta {
+  background: #C99616 !important;
+}
+[data-theme="institucional"] .nav-cta:hover {
+  background: #D9A82A !important;
+}
+[data-theme="institucional"] .mobile-menu {
+  background: #27245D;
+  border-bottom-color: #C99616;
+}
+[data-theme="institucional"] .btn-bordo {
+  background: #27245D;
+}
+[data-theme="institucional"] .btn-bordo:hover {
+  background: #352E6B !important;
+}
+
+/* ─── THEME SWITCH BUTTON (dev only) ─── */
+.theme-switch {
+  position: fixed; bottom: 20px; right: 20px; z-index: 9999;
+  display: flex; flex-direction: column; gap: 6px; align-items: flex-end;
+}
+.theme-switch button {
+  padding: 10px 16px; border: none; border-radius: 6px;
+  font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  letter-spacing: .04em; text-transform: uppercase; transition: all .2s;
+}
+.theme-switch .btn-original {
+  background: #4A0C17; color: #E05A2B;
+}
+.theme-switch .btn-institucional {
+  background: #27245D; color: #C99616;
+}
+.theme-switch button:hover {
+  transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.35);
+}
+.theme-switch button.active {
+  outline: 3px solid #fff; outline-offset: 2px;
+}
+.theme-switch-label {
+  font-size: 9px; color: rgba(0,0,0,.35); letter-spacing: .1em;
+  text-transform: uppercase; text-align: right;
+}
+
 body {
   font-family: 'Outfit', sans-serif;
   background: var(--crema);
