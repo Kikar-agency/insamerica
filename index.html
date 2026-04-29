@@ -460,13 +460,6 @@
   </div>
 </footer>
 
-<!-- THEME SWITCH (dev only — remove before delivery) -->
-<div style="position:fixed;bottom:20px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:8px;align-items:flex-end">
-  <div style="font-size:9px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.5)">Modo prueba colores</div>
-  <button id="btnOriginal" style="padding:12px 20px;border:2px solid #fff;border-radius:6px;background:#252671;color:#C89519;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;cursor:pointer;letter-spacing:.06em;box-shadow:0 4px 16px rgba(0,0,0,.4)">BORDO / DORADO (actual)</button>
-  <button id="btnInstitucional" style="padding:12px 20px;border:2px solid transparent;border-radius:6px;background:#27245D;color:#C99616;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;cursor:pointer;letter-spacing:.06em;box-shadow:0 4px 16px rgba(0,0,0,.4)">BORDO CLÁSICO (anterior)</button>
-</div>
-
 <script>
 window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>50));
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
@@ -536,23 +529,6 @@ if (window.innerWidth < 768) {
   });
 }
 
-// Theme switch
-document.getElementById('btnOriginal').addEventListener('click', function(){ setTheme('original'); });
-document.getElementById('btnInstitucional').addEventListener('click', function(){ setTheme('institucional'); });
-
-function setTheme(theme) {
-  if (theme === 'institucional') {
-    document.documentElement.setAttribute('data-theme', 'institucional');
-    document.getElementById('btnInstitucional').style.borderColor = '#fff';
-    document.getElementById('btnOriginal').style.borderColor = 'transparent';
-  } else {
-    document.documentElement.removeAttribute('data-theme');
-    document.getElementById('btnOriginal').style.borderColor = '#fff';
-    document.getElementById('btnInstitucional').style.borderColor = 'transparent';
-  }
-  try { localStorage.setItem('ia-theme', theme); } catch(e) {}
-}
-try { var t = localStorage.getItem('ia-theme'); if (t) setTheme(t); } catch(e) {}
 
 // ─── HOME CONTACT FORM ─────────────────────────────────
 var HOME_SHEET_URL = 'https://script.google.com/macros/s/AKfycbySO0Jp_jww7HxwGN9JeB_aE2eAjJT3Hl_qMX8Gjb5RmFNcAboZOWudZqeCNNCb_2twHw/exec';
