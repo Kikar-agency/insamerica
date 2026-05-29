@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Docentes — Instituto América Córdoba</title>
+<meta name="description" content="Conocé al equipo de docentes y conducción del Instituto América. Profesionales comprometidos con la educación cristiana de excelencia en Córdoba.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.conduccion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 760px; }
+.equipo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
+.equipo-card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 12px rgba(37,38,113,.06); transition: transform .3s, box-shadow .3s; }
+.equipo-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(37,38,113,.12); }
+.equipo-card-img { aspect-ratio: 3/4; overflow: hidden; background: var(--gris-l); }
+.equipo-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .4s; display: block; }
+.equipo-card:hover .equipo-card-img img { transform: scale(1.03); }
+.equipo-card-body { padding: 1rem 1.2rem; text-align: center; }
+.equipo-card-cargo { font-size: 10px; font-weight: 600; color: var(--dorado); text-transform: uppercase; letter-spacing: .07em; margin-bottom: .3rem; }
+.equipo-card-nombre { font-family: 'Libre Bodoni', 'Georgia', serif; font-size: .95rem; font-weight: 700; color: var(--azul); line-height: 1.3; }
+@media(max-width:1024px) {
+  .conduccion-grid { grid-template-columns: 1fr 1fr; max-width: 640px; }
+  .equipo-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media(max-width:768px) {
+  .conduccion-grid { grid-template-columns: 1fr; max-width: 380px; }
+  .equipo-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+}
+@media(max-width:480px) { .equipo-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo"><img src="img/escudo.png" alt="Instituto América" class="nav-escudo" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0"><div class="nav-logo-text">Instituto<br>América</div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="vida-academica.html">Vida Académica</a></li>
+    <li><a href="docentes.html" class="active">Docentes</a></li>
+    <li><a href="novedades.html">Novedades</a></li>
+    <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+    <li><a href="https://deioweb.com.ar/SAG/" target="_blank" class="nav-autogestion">Autogestión ↗</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="vida-academica.html">Vida Académica</a><a href="docentes.html">Docentes</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a><a href="https://deioweb.com.ar/SAG/" target="_blank">Autogestión ↗</a>
+</div>
+
+<header class="page-header">
+  <div class="page-header-tag">Nuestro equipo</div>
+  <h1>Docentes y Conducción</h1>
+  <p>Profesionales comprometidos con la formación integral de nuestros alumnos, desde la fe cristiana y la excelencia académica.</p>
+</header>
+
+<!-- CONDUCCION -->
+<section class="section">
+  <div class="section-tag">Conducción institucional</div>
+  <h2 class="section-title" style="margin-bottom:2rem">Equipo directivo</h2>
+  <div class="conduccion-grid">
+    <div class="docente-card reveal">
+      <div class="docente-img-wrap">
+        <img src="https://trompo.ar/america/wp-content/uploads/2024/10/205-scaled.jpg" alt="Prof. Débora Zapata">
+      </div>
+      <div class="docente-body">
+        <div class="docente-cargo">Directora — Nivel Inicial y Primario</div>
+        <div class="docente-nombre">Prof. Débora Zapata</div>
+        <p class="docente-bio">Docente por vocación, graduada en 1993. Se incorporó al Instituto América en 2006, proveniente de una escuela hermanada por la misma fe cristiana. Su trayectoria y compromiso con la educación la convierten en un pilar fundamental de nuestra comunidad.</p>
+      </div>
+    </div>
+    <div class="docente-card reveal d1">
+      <div class="docente-img-wrap">
+        <img src="https://trompo.ar/america/wp-content/uploads/2024/10/206-scaled.jpg" alt="Prof. Silvia Débora Rico">
+      </div>
+      <div class="docente-body">
+        <div class="docente-cargo">Vicedirectora — Nivel Inicial y Primario</div>
+        <div class="docente-nombre">Prof. Silvia Débora Rico</div>
+        <p class="docente-bio">Educadora con una sólida trayectoria académica y profesional, se ha destacado por su dedicación y compromiso en el ámbito educativo y social. Un referente de calidez, rigor pedagógico y compromiso cristiano para toda nuestra comunidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO DOCENTE -->
+<section class="section" style="background:#fdfaf7">
+  <div class="section-tag">Nuestro equipo</div>
+  <h2 class="section-title" style="margin-bottom:.5rem">Cuerpo docente</h2>
+  <p style="font-size:14px;color:var(--gris);font-weight:300;margin-bottom:0">El equipo de profesionales que acompaña día a día la formación de nuestros alumnos.</p>
+
+  <div class="equipo-grid">
+    <div class="equipo-card reveal">
+      <div class="equipo-card-img"><img src="img/docente-cativa-nadia.jpg" alt="Prof. Cativa Nadia S."></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. Cativa Nadia S.</div></div>
+    </div>
+    <div class="equipo-card reveal d1">
+      <div class="equipo-card-img"><img src="img/docente-ballesteros-soledad.jpg" alt="Prof. Ballesteros Soledad"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. Ballesteros Soledad</div></div>
+    </div>
+    <div class="equipo-card reveal d2">
+      <div class="equipo-card-img"><img src="img/docente-larosa-silvana.jpg" alt="Prof. La Rosa Silvana"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. La Rosa Silvana</div></div>
+    </div>
+    <div class="equipo-card reveal d3">
+      <div class="equipo-card-img"><img src="img/docente-tosini-silvina.jpg" alt="Prof. Tosini Silvina"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. Tosini Silvina</div></div>
+    </div>
+    <div class="equipo-card reveal">
+      <div class="equipo-card-img"><img src="img/docente-gonzalez-jonatan.jpg" alt="Prof. González Jonatan"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. González Jonatan</div></div>
+    </div>
+    <div class="equipo-card reveal d1">
+      <div class="equipo-card-img"><img src="img/docente-picolet-sonia.jpg" alt="Prof. Picolet Sonia"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Docente</div><div class="equipo-card-nombre">Prof. Picolet Sonia</div></div>
+    </div>
+    <div class="equipo-card reveal d2">
+      <div class="equipo-card-img"><img src="img/docente-garcia-dolores.jpg" alt="Prof. Rosa M. Dolores García"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Dirección</div><div class="equipo-card-nombre">Prof. Rosa M. Dolores García</div></div>
+    </div>
+    <div class="equipo-card reveal d3">
+      <div class="equipo-card-img"><img src="img/docente-gonzalez-elizabeth.jpg" alt="González Elizabeth"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Preceptor</div><div class="equipo-card-nombre">González Elizabeth</div></div>
+    </div>
+    <div class="equipo-card reveal">
+      <div class="equipo-card-img"><img src="img/docente-montenegro-lorena.jpg" alt="Montenegro Lorena"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Preceptor</div><div class="equipo-card-nombre">Montenegro Lorena</div></div>
+    </div>
+    <div class="equipo-card reveal d1">
+      <div class="equipo-card-img"><img src="img/docente-zarza-daniela.jpg" alt="Zarza Daniela"></div>
+      <div class="equipo-card-body"><div class="equipo-card-cargo">Preceptor</div><div class="equipo-card-nombre">Zarza Daniela</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" style="text-align:center">
+  <h2 class="section-title light" style="margin-bottom:1rem">¿Querés trabajar con nosotros?</h2>
+  <p style="color:rgba(255,255,255,.6);max-width:460px;margin:0 auto 2rem;font-size:14px;line-height:1.7;font-weight:300">Si sos docente y compartís nuestra visión educativa cristiana, contactanos.</p>
+  <a href="contacto.html" class="btn-primary">Envianos tu consulta →</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="logo-row"><img src="img/escudo.png" alt="IA" style="width:30px;height:30px;border-radius:50%;object-fit:cover"><span class="logo-name">Instituto América</span></div><p>Colegio cristiano evangélico en Córdoba con más de 50 años formando estudiantes en valores, fe y excelencia académica.</p></div>
+    <div class="footer-col"><h4>Institución</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></div>
+    <div class="footer-col"><h4>Niveles</h4><a href="vida-academica.html#inicial">Nivel Inicial</a><a href="vida-academica.html#primario">Nivel Primario</a><a href="vida-academica.html#secundario">Nivel Secundario</a><a href="docentes.html">Docentes</a></div>
+    <div class="footer-col"><h4>Contacto</h4><span>Francisco del Prado 2662</span><span>Córdoba, Argentina</span><span>+54 9 351 123-4567</span><span>info@institutoamerica.com.ar</span></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Instituto América. Todos los derechos reservados.</p>
+    <div class="footer-right"><a href="https://deioweb.com.ar/SAG/" target="_blank">Autogestión</a><a href="contacto.html">Inscripciones</a><span class="footer-credit">Diseño: Kikar Agencia Digital</span></div>
+  </div>
+</footer>
+
+<button class="btn-original active" onclick="setTheme('original')">Bordo / Naranja</button>
+  <button class="btn-institucional" onclick="setTheme('institucional')">Azul / Mostaza</button>
+</div>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>50));
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+</script>
+</body>
+</html>
