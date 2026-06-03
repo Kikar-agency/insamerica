@@ -448,7 +448,21 @@ footer { background: var(--azul2); padding: 3.5rem 3rem 1.5rem; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes scaleIn { from { opacity: 0; transform: scale(.5); } to { opacity: 1; transform: scale(1); } }
 
-/* ─── HOVER SLIDESHOW ─────────────────────────────────── */
+/* ─── DESKTOP HIDDEN (niveles cards) ─────────────────── */
+.desktop-hidden { display: none; }
+@media (max-width: 768px) { .desktop-hidden { display: block; } }
+
+/* ─── NATACIÓN GALLERY ────────────────────────────────── */
+.natacion-gallery { display: flex; flex-direction: column; gap: .8rem; }
+.natacion-main { position: relative; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: var(--gris-l); }
+.natacion-thumbs { display: grid; grid-template-columns: repeat(4,1fr); gap: .5rem; }
+.nata-thumb {
+  width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 4px;
+  cursor: pointer; opacity: .55; border: 2px solid transparent;
+  transition: opacity .25s, border-color .25s;
+}
+.nata-thumb:hover { opacity: .85; }
+.nata-thumb.active { opacity: 1; border-color: var(--dorado); }
 .slider-wrap {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
