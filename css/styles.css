@@ -268,7 +268,7 @@ nav.scrolled { height: 56px; box-shadow: 0 4px 24px rgba(0,0,0,.3); }
 /* ─── NOSOTROS ────────────────────────────────────────── */
 .nosotros-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .nosotros-img-wrap { position: relative; }
-.nosotros-img-wrap img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 4px; }
+.nosotros-img-wrap img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: left center; border-radius: 4px; }
 .accent-box {
   position: absolute; bottom: -20px; right: -20px;
   width: 130px; height: 130px; background: var(--bordo); border-radius: 4px;

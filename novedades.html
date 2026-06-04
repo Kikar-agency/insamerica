@@ -22,6 +22,8 @@
 .novedad-col-main { grid-column: span 2; }
 @media(max-width:1024px){ .novedades-grid { grid-template-columns: 1fr 1fr; } .novedad-col-main { grid-column: span 2; } }
 @media(max-width:768px){ .novedades-grid { grid-template-columns: 1fr; } .novedad-col-main { grid-column: span 1; } }
+.youtube-responsive { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin-top: 1rem; background: #000; }
+.youtube-responsive iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 </style>
 </head>
 <body>
@@ -143,12 +145,15 @@
         <div class="fecha">Todos los días</div>
         <h2>El izamiento de la bandera: una tradición que nos une cada mañana</h2>
         <p>Cada día, antes de comenzar las clases, nuestros alumnos se reúnen para el acto del izamiento de la bandera. Un momento de pausa, reflexión y pertenencia que forma parte de la identidad del Instituto América desde sus inicios.</p>
-        <!-- VIDEO BANDERA (opcional) -->
-        <!-- Si tenés un video corto del acto, descomentá esto y poné la URL:
-        <video controls style="width:100%;border-radius:4px;margin-top:1rem" poster="img/COD19.png">
-          <source src="video/bandera.mp4" type="video/mp4">
-        </video>
-        -->
+        <!-- VIDEO BANDERA -->
+        <div class="youtube-responsive">
+          <iframe
+            src="https://www.youtube.com/embed/LNo2IkPvGgM"
+            title="Video del izamiento de la bandera"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
     </div>
 
