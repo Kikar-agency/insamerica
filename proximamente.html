@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instituto América — Próximamente</title>
+<meta name="description" content="Instituto América Córdoba — Sitio en construcción.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --azul:   #252671;
+    --dorado: #C89519;
+    --bordo:  #771005;
+    --crema:  #F5F0E8;
+  }
+  html, body {
+    height: 100%;
+    font-family: 'Outfit', sans-serif;
+    background: var(--azul);
+    color: #fff;
+    overflow: hidden;
+  }
+
+  /* Fondo animado */
+  .bg {
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse at 20% 80%, rgba(119,16,5,.35) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(200,149,25,.2) 0%, transparent 50%),
+      linear-gradient(135deg, #1a1d55 0%, #252671 50%, #1a1d55 100%);
+    animation: bgPulse 8s ease-in-out infinite alternate;
+  }
+  @keyframes bgPulse {
+    from { opacity: 1; }
+    to { opacity: .85; }
+  }
+
+  /* Grilla decorativa */
+  .grid-lines {
+    position: fixed; inset: 0; z-index: 0; opacity: .06;
+    background-image:
+      linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Contenido */
+  .wrap {
+    position: relative; z-index: 2;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  /* Escudo */
+  .escudo-wrap {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+    border: 2px solid rgba(200,149,25,.4);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 2rem;
+    animation: float 4s ease-in-out infinite;
+  }
+  .escudo-wrap img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+  }
+
+  /* Textos */
+  .eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--dorado); margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: 10px; justify-content: center;
+  }
+  .eyebrow::before, .eyebrow::after {
+    content: ''; width: 28px; height: 1px; background: var(--dorado); opacity: .6;
+  }
+
+  h1 {
+    font-family: 'Libre Bodoni', serif;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 700; line-height: 1.1;
+    margin-bottom: .5rem;
+    color: #fff;
+  }
+  h1 em { font-style: italic; color: var(--dorado); }
+
+  .subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: rgba(255,255,255,.6);
+    font-weight: 300; line-height: 1.6;
+    max-width: 460px; margin: 0 auto 2.5rem;
+  }
+
+  /* Separador */
+  .sep {
+    width: 60px; height: 3px;
+    background: linear-gradient(to right, var(--bordo), var(--dorado));
+    border-radius: 2px; margin: 0 auto 2.5rem;
+  }
+
+  /* Mensaje */
+  .message {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(200,149,25,.25);
+    border-radius: 8px;
+    padding: 1.5rem 2.5rem;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    backdrop-filter: blur(8px);
+  }
+  .message p {
+    font-size: 15px; line-height: 1.75;
+    color: rgba(255,255,255,.72);
+    font-weight: 300;
+  }
+  .message strong { color: #fff; font-weight: 500; }
+
+  /* Contacto */
+  .contact-row {
+    display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .contact-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; color: rgba(255,255,255,.55);
+  }
+  .contact-item a { color: var(--dorado); text-decoration: none; transition: opacity .2s; }
+  .contact-item a:hover { opacity: .75; }
+
+  /* Footer */
+  .foot {
+    position: fixed; bottom: 1.5rem; left: 0; right: 0;
+    text-align: center; z-index: 2;
+  }
+  .foot p { font-size: 11px; color: rgba(255,255,255,.2); letter-spacing: .06em; }
+
+  /* Versículo */
+  .versiculo {
+    font-family: 'Libre Bodoni', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(255,255,255,.35);
+    margin-top: .5rem;
+  }
+
+  @media (max-width: 480px) {
+    .contact-row { flex-direction: column; gap: 1rem; align-items: center; }
+    .message { padding: 1.2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="grid-lines"></div>
+
+<div class="wrap">
+  <div class="escudo-wrap">
+    <img src="img/escudo.png" alt="Instituto América" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-family:Libre Bodoni,serif;font-size:1.6rem;font-weight:700;color:#C89519\'>IA</span>'">
+  </div>
+
+  <div class="eyebrow">Instituto América · Córdoba</div>
+
+  <h1>Estamos construyendo<br>algo <em>grande</em></h1>
+
+  <div class="sep"></div>
+
+  <p class="subtitle">Nuestro nuevo sitio web está en camino. Muy pronto vas a poder conocer todo sobre nuestra comunidad educativa.</p>
+
+  <div class="message">
+    <p>Mientras tanto, podés comunicarte con nosotros para <strong>consultas de inscripción</strong> o cualquier información que necesites.</p>
+  </div>
+
+  <div class="contact-row">
+    <div class="contact-item">
+      <span>📍</span>
+      <span>Francisco del Prado 2662, Córdoba</span>
+    </div>
+    <div class="contact-item">
+      <span>✉️</span>
+      <a href="mailto:info@institutoamerica.com.ar">info@institutoamerica.com.ar</a>
+    </div>
+  </div>
+  <div class="contact-row" style="margin-bottom:0">
+    <div class="contact-item">
+      <span>📋</span>
+      <span>Inscripciones: <a href="mailto:matriculainicialprimario@gmail.com">Inicial y Primario</a> · <a href="mailto:matriculasecundario@gmail.com">Secundario</a></span>
+    </div>
+  </div>
+
+  <p class="versiculo">«Instruye al niño en su camino, y aun cuando fuere viejo no se apartará de él.» — Proverbios 22:6</p>
+</div>
+
+<div class="foot">
+  <p>Instituto América · Desde 1966 · Córdoba, Argentina</p>
+</div>
+</body>
+</html>

@@ -79,7 +79,7 @@
   </div>
   <div class="hero-stats">
     <div><div class="stat-num">50+</div><div class="stat-label">Años formando</div></div>
-    <div><div class="stat-num">1,200</div><div class="stat-label">Alumnos activos</div></div>
+    <div><div class="stat-num">450</div><div class="stat-label">Alumnos activos</div></div>
     <div><div class="stat-num">98%</div><div class="stat-label">Egresados universitarios</div></div>
   </div>
   <!-- Indicadores del slideshow -->
@@ -261,7 +261,7 @@
           <span style="font-size:1.4rem">🎓</span>
           <div>
             <div style="font-size:11px;font-weight:700;color:var(--azul);text-transform:uppercase;letter-spacing:.07em;margin-bottom:2px">Para quiénes</div>
-            <div style="font-size:13.5px;color:var(--gris);font-weight:300">Alumnos de todos los niveles · <strong style="color:var(--azul)">Varones y mujeres por separado</strong></div>
+            <div style="font-size:13.5px;color:var(--gris);font-weight:300">Nivel Secundario · <strong style="color:var(--azul)">Varones y mujeres por separado</strong></div>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:1rem;padding:.9rem 1.1rem;background:var(--crema);border-radius:4px;border-left:3px solid var(--azul)">
@@ -274,21 +274,24 @@
       </div>
       <a href="contacto.html" class="btn-primary" style="background:var(--azul);color:#fff">Consultá por esta actividad →</a>
     </div>
-    <!-- GALERÍA NATACIÓN con animación -->
+    <!-- VIDEO NATACIÓN -->
     <div class="reveal d1">
-      <div class="natacion-gallery">
-        <div class="natacion-main">
-          <img src="img/CODPIL1.png" alt="Natación" id="nataMain" style="width:100%;height:100%;object-fit:cover;border-radius:6px;transition:opacity .4s ease">
-          <div style="position:absolute;bottom:12px;right:12px;background:var(--azul);color:#fff;padding:.8rem 1.1rem;border-radius:4px;text-align:center;box-shadow:0 8px 24px rgba(37,38,113,.3)">
-            <div style="font-family:'Libre Bodoni','Georgia',serif;font-size:1.8rem;font-weight:700;color:var(--dorado);line-height:1">2</div>
-            <div style="font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.8;margin-top:2px">veces/semana</div>
-          </div>
+      <div style="position:relative;border-radius:8px;overflow:hidden;box-shadow:0 12px 40px rgba(37,38,113,.2)">
+        <!-- Video YouTube autoplay mute loop -->
+        <div style="position:relative;aspect-ratio:16/9">
+          <iframe
+            src="https://www.youtube.com/embed/1dugmvKwI0Q?autoplay=1&mute=1&loop=1&playlist=1dugmvKwI0Q&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+            title="Natación Instituto América"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen
+            style="position:absolute;inset:0;width:100%;height:100%;border-radius:8px">
+          </iframe>
         </div>
-        <div class="natacion-thumbs">
-          <img src="img/CODPIL1.png" alt="" class="nata-thumb active" onclick="setNataImg(this,'img/CODPIL1.png')">
-          <img src="img/COD12.png" alt="" class="nata-thumb" onclick="setNataImg(this,'img/COD12.png')">
-          <img src="img/COD13.png" alt="" class="nata-thumb" onclick="setNataImg(this,'img/COD13.png')">
-          <img src="img/COD14.png" alt="" class="nata-thumb" onclick="setNataImg(this,'img/COD14.png')">
+        <!-- Badge 2 veces/semana -->
+        <div style="position:absolute;bottom:12px;right:12px;background:var(--azul);color:#fff;padding:.8rem 1.1rem;border-radius:4px;text-align:center;box-shadow:0 8px 24px rgba(37,38,113,.5);z-index:2">
+          <div style="font-family:'Libre Bodoni','Georgia',serif;font-size:1.8rem;font-weight:700;color:var(--dorado);line-height:1">2</div>
+          <div style="font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.8;margin-top:2px">veces/semana</div>
         </div>
       </div>
     </div>
@@ -307,24 +310,24 @@
   <div class="novedades-grid">
     <a href="novedades.html" class="novedad-card reveal">
       <div class="novedad-img">
-        <img src="https://trompo.ar/america/wp-content/uploads/2024/10/205-scaled.jpg" alt="Prof. Débora Zapata">
-        <span class="novedad-tag">Institución</span>
+        <img src="img/COD15.png" alt="Clases de tecnología">
+        <span class="novedad-tag" style="background:var(--azul)">Tecnología</span>
       </div>
       <div class="novedad-body">
-        <div class="novedad-fecha">26 mayo, 2025</div>
-        <div class="novedad-title">Presentación de la Directora del Nivel Inicial y Primario</div>
-        <p class="novedad-excerpt">La profesora Débora Zapata es una docente por vocación, graduada en el año 1993. Se incorporó a nuestra institución en 2006, proveniente de una escuela hermanada por la misma fe.</p>
+        <div class="novedad-fecha">Ciclo lectivo 2025</div>
+        <div class="novedad-title">Clases de tecnología: aprendiendo con herramientas del siglo XXI</div>
+        <p class="novedad-excerpt">Nuestros alumnos trabajan con computadoras, desarrollan habilidades digitales y aprenden a usar la tecnología de forma responsable y creativa.</p>
       </div>
     </a>
     <a href="novedades.html" class="novedad-card reveal reveal-delay-1">
       <div class="novedad-img">
-        <img src="https://trompo.ar/america/wp-content/uploads/2024/10/206-scaled.jpg" alt="Prof. Silvia Débora Rico">
-        <span class="novedad-tag">Institución</span>
+        <img src="img/COD19.png" alt="Izamiento de bandera">
+        <span class="novedad-tag" style="background:var(--bordo)">Tradición</span>
       </div>
       <div class="novedad-body">
-        <div class="novedad-fecha">22 octubre, 2024</div>
-        <div class="novedad-title">Presentación de la Vicedirectora del Nivel Inicial y Primario</div>
-        <p class="novedad-excerpt">La profesora Silvia Débora Rico, educadora con sólida trayectoria académica y profesional, se ha destacado por su dedicación y compromiso en el ámbito educativo y social.</p>
+        <div class="novedad-fecha">Todos los días</div>
+        <div class="novedad-title">El izamiento de la bandera: una tradición que nos une cada mañana</div>
+        <p class="novedad-excerpt">Cada día, antes de comenzar las clases, nuestros alumnos se reúnen para el acto del izamiento de la bandera. Un momento de pausa y pertenencia.</p>
       </div>
     </a>
     <a href="contacto.html" class="novedad-card reveal reveal-delay-2">
@@ -360,7 +363,7 @@
     <div class="admisiones-box reveal reveal-delay-1">
       <h3>Inscripciones 2026 abiertas</h3>
       <p>Los cupos son limitados. Te recomendamos iniciar el proceso con anticipación para asegurar el lugar de tu hijo/a.</p>
-      <div class="detail-row"><span>📅</span><span>Período: <strong style="color:#fff">Agosto — Noviembre 2025</strong></span></div>
+      <div class="detail-row"><span>📅</span><span>Período: <strong style="color:#fff">Julio — Noviembre 2026</strong></span></div>
       <div class="detail-row"><span>📋</span><span>Documentación: DNI del alumno, certificado de vacunación, último boletín y partida de nacimiento</span></div>
       <div class="detail-row"><span>🎓</span><span>Niveles: Inicial, Primario y Secundario</span></div>
       <div class="detail-row"><span>💳</span><span>Plan de becas y cuotas disponible — consultanos</span></div>
@@ -398,10 +401,10 @@
       <div class="section-tag" style="color:var(--dorado)">Contactanos</div>
       <h2 class="section-title light" style="margin-bottom:1rem">¿Tenés alguna consulta?</h2>
       <p style="color:rgba(255,255,255,.55);font-size:14px;line-height:1.75;font-weight:300;margin-bottom:2rem">Completá el formulario y nos comunicamos a la brevedad. También podés contactarnos directamente:</p>
-      <div class="contact-item"><div class="contact-icon">📍</div><div class="contact-text"><strong>Dirección</strong><span>Francisco del Prado 2662, Córdoba</span></div></div>
-      <div class="contact-item"><div class="contact-icon">📞</div><div class="contact-text"><strong>Teléfono</strong><span>+54 9 351 123-4567</span></div></div>
-      <div class="contact-item"><div class="contact-icon">✉️</div><div class="contact-text"><strong>Email</strong><span>info@institutoamerica.com.ar</span></div></div>
-      <div class="contact-item"><div class="contact-icon">🕐</div><div class="contact-text"><strong>Horario</strong><span>Lunes a Viernes: 08:00 a 18:00</span></div></div>
+      <div class="contact-item"><div class="contact-icon">📍</div><div class="contact-text"><strong>Dirección</strong><span>Francisco del Prado 2656, Córdoba</span></div></div>
+      <div class="contact-item"><div class="contact-icon">📞</div><div class="contact-text"><strong>Teléfono</strong><span>+54 9 351 897-2903</span></div></div>
+      <div class="contact-item"><div class="contact-icon">✉️</div><div class="contact-text"><strong>Email</strong><span>consultas@instamerica.com.ar</span></div></div>
+      <div class="contact-item"><div class="contact-icon">🕐</div><div class="contact-text"><strong>Horario</strong><span>Lun–Mié: 08:00 a 12:00 / Lun–Vie: 14:00 a 17:00</span></div></div>
     </div>
     <div class="contacto-form reveal d1" id="homeFormContainer">
       <div id="homeFormContent">
@@ -411,7 +414,7 @@
           <div class="form-group"><label>Apellido</label><input type="text" id="hApellido" placeholder="Tu apellido" required></div>
         </div>
         <div class="form-group"><label>Email</label><input type="email" id="hEmail" placeholder="tu@email.com" required></div>
-        <div class="form-group"><label>Teléfono</label><input type="tel" id="hTelefono" placeholder="(351) 000-0000"></div>
+        <div class="form-group"><label>Teléfono</label><input type="tel" id="hTelefono" placeholder="(351) 897-2903"></div>
         <div class="form-group">
           <label>Motivo de consulta</label>
           <select id="hMotivo">
@@ -450,7 +453,7 @@
     </div>
     <div class="footer-col"><h4>Institución</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></div>
     <div class="footer-col"><h4>Niveles</h4><a href="vida-academica.html#inicial">Nivel Inicial</a><a href="vida-academica.html#primario">Nivel Primario</a><a href="vida-academica.html#secundario">Nivel Secundario</a><a href="docentes.html">Docentes</a></div>
-    <div class="footer-col"><h4>Contacto</h4><span>Francisco del Prado 2662</span><span>Córdoba, Argentina</span><span>+54 9 351 123-4567</span><span>info@institutoamerica.com.ar</span></div>
+    <div class="footer-col"><h4>Contacto</h4><span>Francisco del Prado 2656</span><span>Córdoba, Argentina</span><span>+54 9 351 897-2903</span><span>consultas@instamerica.com.ar</span></div>
   </div>
   <div class="footer-bottom">
     <p>© 2025 Instituto América. Todos los derechos reservados.</p>

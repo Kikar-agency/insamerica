@@ -22,8 +22,6 @@
 .novedad-col-main { grid-column: span 2; }
 @media(max-width:1024px){ .novedades-grid { grid-template-columns: 1fr 1fr; } .novedad-col-main { grid-column: span 2; } }
 @media(max-width:768px){ .novedades-grid { grid-template-columns: 1fr; } .novedad-col-main { grid-column: span 1; } }
-.youtube-responsive { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin-top: 1rem; background: #000; }
-.youtube-responsive iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 </style>
 </head>
 <body>
@@ -54,37 +52,8 @@
 <section class="section">
   <div class="novedades-grid">
 
-    <!-- NOTA PRINCIPAL -->
-    <div class="novedad-full novedad-col-main reveal">
-      <div class="novedad-full-img">
-        <img src="https://trompo.ar/america/wp-content/uploads/2024/10/205-scaled.jpg" alt="Prof. Débora Zapata">
-        <span class="novedad-tag">Institución</span>
-      </div>
-      <div class="novedad-full-body">
-        <div class="fecha">26 mayo, 2025</div>
-        <h2>Presentación de la Directora del Nivel Inicial y Primario</h2>
-        <p>La profesora Débora Zapata es una docente por vocación, graduada en el año 1993. Se incorporó a nuestra institución en el año 2006, proveniente de una escuela hermanada por la misma fe cristiana que nos une.</p>
-        <p>Su trayectoria de más de 30 años en educación, combinada con su profundo compromiso con los valores que guían al Instituto América, la convierten en un referente indiscutible de nuestra comunidad educativa. Su liderazgo se caracteriza por la calidez humana, el rigor pedagógico y una fe vivida que impregna cada aspecto de su gestión.</p>
-        <p>La profesora Zapata asumió la conducción del Nivel Inicial y Primario con el firme propósito de seguir fortaleciendo la propuesta educativa del Instituto y consolidar los lazos entre las familias, los docentes y los alumnos.</p>
-      </div>
-    </div>
-
-    <!-- NOTA SECUNDARIA -->
-    <div class="novedad-full reveal d1">
-      <div class="novedad-full-img">
-        <img src="https://trompo.ar/america/wp-content/uploads/2024/10/206-scaled.jpg" alt="Prof. Silvia Débora Rico">
-        <span class="novedad-tag">Institución</span>
-      </div>
-      <div class="novedad-full-body">
-        <div class="fecha">22 octubre, 2024</div>
-        <h2>Presentación de la Vicedirectora del Nivel Inicial y Primario</h2>
-        <p>La profesora Silvia Débora Rico, una educadora con una sólida trayectoria académica y profesional, se ha destacado por su dedicación y compromiso en el ámbito educativo y social.</p>
-        <p>Su incorporación a la conducción del Nivel Inicial y Primario reafirma el compromiso del Instituto América con la calidad educativa y la formación en valores.</p>
-      </div>
-    </div>
-
     <!-- CARD INSCRIPCIONES -->
-    <div class="novedad-full reveal">
+    <div class="novedad-full novedad-col-main reveal">
       <div class="novedad-full-img" style="background:linear-gradient(135deg,var(--azul),var(--bordo2));display:flex;align-items:center;justify-content:center">
         <div style="text-align:center;color:rgba(255,255,255,.75)">
           <div style="font-size:3rem;margin-bottom:.8rem">📅</div>
@@ -145,13 +114,14 @@
         <div class="fecha">Todos los días</div>
         <h2>El izamiento de la bandera: una tradición que nos une cada mañana</h2>
         <p>Cada día, antes de comenzar las clases, nuestros alumnos se reúnen para el acto del izamiento de la bandera. Un momento de pausa, reflexión y pertenencia que forma parte de la identidad del Instituto América desde sus inicios.</p>
-        <!-- VIDEO BANDERA -->
-        <div class="youtube-responsive">
+        <div style="margin-top:1.2rem;border-radius:6px;overflow:hidden;aspect-ratio:16/9;position:relative">
           <iframe
-            src="https://www.youtube.com/embed/LNo2IkPvGgM"
-            title="Video del izamiento de la bandera"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
+            src="https://www.youtube.com/embed/LNo2IkPvGgM?rel=0&modestbranding=1"
+            title="Izamiento de bandera — Instituto América"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="position:absolute;inset:0;width:100%;height:100%">
           </iframe>
         </div>
       </div>
@@ -169,7 +139,7 @@
     <div class="footer-brand"><div class="logo-row"><img src="img/escudo.png" alt="IA" style="width:30px;height:30px;border-radius:50%;object-fit:cover"><span class="logo-name">Instituto América</span></div><p>Colegio cristiano evangélico en Córdoba con más de 50 años formando estudiantes en valores, fe y excelencia académica.</p></div>
     <div class="footer-col"><h4>Institución</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="novedades.html">Novedades</a><a href="contacto.html">Contacto</a></div>
     <div class="footer-col"><h4>Niveles</h4><a href="vida-academica.html#inicial">Nivel Inicial</a><a href="vida-academica.html#primario">Nivel Primario</a><a href="vida-academica.html#secundario">Nivel Secundario</a><a href="docentes.html">Docentes</a></div>
-    <div class="footer-col"><h4>Contacto</h4><span>Francisco del Prado 2662</span><span>Córdoba, Argentina</span><span>+54 9 351 123-4567</span><span>info@institutoamerica.com.ar</span></div>
+    <div class="footer-col"><h4>Contacto</h4><span>Francisco del Prado 2656</span><span>Córdoba, Argentina</span><span>+54 9 351 897-2903</span><span>consultas@instamerica.com.ar</span></div>
   </div>
   <div class="footer-bottom">
     <p>© 2025 Instituto América. Todos los derechos reservados.</p>
